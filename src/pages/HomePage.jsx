@@ -167,57 +167,40 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
             </p>
           </div>
 
-          {/* Connected Multimodal Columns */}
-          <div className="modes-exact-grid-wrap">
-            
-            {/* Background Connecting Dotted Wave Line */}
-            <div className="modes-connecting-line-svg">
-              <svg viewBox="0 0 1200 40" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path 
-                  d="M0 25 C150 15, 300 35, 450 22 C600 10, 750 32, 900 20 C1050 10, 1150 28, 1200 22" 
-                  stroke="#10B981" 
-                  strokeWidth="1.5" 
-                  strokeDasharray="4 4" 
-                  strokeOpacity="0.45"
-                />
-              </svg>
-            </div>
-
-            <div className="modes-exact-grid">
-              {transportModes.map((mode, index) => (
-                <div key={mode.id} className="mode-exact-column">
-                  
-                  {/* Top Watermark */}
-                  <div className="mode-col-watermark">{mode.watermark}</div>
-
-                  {/* Artwork Illustration */}
-                  <div className="mode-col-art-box">
-                    <img src={mode.image} alt={mode.title} className="mode-col-art-img" />
-                  </div>
-
-                  {/* Node Dot on Connected Line */}
-                  <div className="mode-col-node-wrap">
-                    <div className="mode-col-node-dot"></div>
-                  </div>
-
-                  {/* Text Content */}
-                  <div className="mode-col-content">
-                    <h3 className="mode-col-title">{mode.title}</h3>
-                    <p className="mode-col-desc">{mode.desc}</p>
-                    
-                    <div className="mode-col-footer">
-                      <span className="mode-col-stat">{mode.capacity}</span>
-                      <Link to="/services" className="mode-col-explore-link" aria-label={`Explore ${mode.title}`}>
-                        <span>Explore</span>
-                        <ArrowRight size={14} />
-                      </Link>
-                    </div>
-                  </div>
-
+          {/* 4 Multimodal Mode Cards Grid */}
+          <div className="modes-cards-grid-exact">
+            {transportModes.map((mode, index) => (
+              <div key={mode.id} className="mode-card-item-exact">
+                
+                {/* Framed Artwork Illustration Box */}
+                <div className="mode-card-art-frame">
+                  <img src={mode.image} alt={mode.title} className="mode-card-frame-img" />
                 </div>
-              ))}
-            </div>
 
+                {/* Step Row with 01-04 Badge, Dotted Connector & Node */}
+                <div className="mode-card-step-row">
+                  <span className="mode-card-step-badge">{`0${index + 1}`}</span>
+                  <span className="mode-card-step-dash"></span>
+                  <span className="mode-card-step-node"></span>
+                </div>
+
+                {/* Title & Circular Arrow Action */}
+                <div className="mode-card-title-row">
+                  <h3 className="mode-card-title-text">{mode.title}</h3>
+                  <Link 
+                    to="/services" 
+                    className="mode-card-circle-arrow" 
+                    aria-label={`Explore ${mode.title}`}
+                  >
+                    <ArrowRight size={15} />
+                  </Link>
+                </div>
+
+                {/* Description */}
+                <p className="mode-card-desc-text">{mode.desc}</p>
+
+              </div>
+            ))}
           </div>
 
         </div>
