@@ -68,10 +68,10 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
               <span>INTERNATIONAL TRADE & FREIGHT FORWARDING</span>
             </div>
 
-            {/* Main Headline (Guaranteed 2 Lines) */}
+            {/* Main Headline (Guaranteed 2 Lines on Desktop, Fluid on Mobile) */}
             <h1 className="hero-title-exact">
-              <span style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>Connecting Continents.</span><br />
-              <span className="highlight-gold" style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+              <span className="hero-title-line">Connecting Continents.</span>{' '}
+              <span className="hero-title-line highlight-gold">
                 Empowering{' '}
                 <span 
                   style={{

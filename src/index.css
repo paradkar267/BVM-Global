@@ -594,6 +594,17 @@ textarea {
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
 }
 
+.hero-title-line {
+  display: inline;
+}
+
+@media (min-width: 640px) {
+  .hero-title-line {
+    display: inline-block;
+    white-space: nowrap;
+  }
+}
+
 .hero-title-exact .highlight-gold {
   color: #22C55E;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75);
@@ -726,6 +737,110 @@ textarea {
   color: #CBD5E1;
   margin-top: 0.18rem;
   line-height: 1.3;
+}
+
+/* Hero Responsive Media Queries */
+@media (max-width: 992px) {
+  .hero-bottom-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-gradient-overlay-exact {
+    background: linear-gradient(180deg,
+        rgba(8, 28, 21, 0.65) 0%,
+        rgba(8, 28, 21, 0.45) 40%,
+        rgba(8, 28, 21, 0.8) 100%);
+  }
+
+  .hero-content-container {
+    padding-top: clamp(80px, 12vh, 100px);
+    padding-bottom: 2rem;
+  }
+
+  .hero-eyebrow-exact {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-title-exact {
+    font-size: clamp(2rem, 7.5vw, 2.75rem);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description-exact {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-bottom-highlights-wrapper {
+    padding: 0.85rem 0 1.5rem 0;
+  }
+
+  .hero-bottom-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem 0.65rem;
+    background: rgba(8, 28, 21, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    padding: 1rem 0.85rem;
+  }
+
+  .hero-highlight-item {
+    padding: 0.2rem;
+    gap: 0.65rem;
+    align-items: flex-start;
+  }
+
+  .hero-highlight-item .highlight-icon {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+  }
+
+  .hero-highlight-item .highlight-title {
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+
+  .hero-highlight-item .highlight-sub {
+    font-size: 0.68rem;
+    line-height: 1.25;
+    color: #A7F3D0;
+    margin-top: 0.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-bottom-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 0.5rem;
+    padding: 0.85rem 0.65rem;
+  }
+
+  .hero-highlight-item {
+    gap: 0.5rem;
+  }
+
+  .hero-highlight-item .highlight-icon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .hero-highlight-item .highlight-title {
+    font-size: 0.76rem;
+  }
+
+  .hero-highlight-item .highlight-sub {
+    font-size: 0.64rem;
+  }
 }
 
 .card-mini-pill {
