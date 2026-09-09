@@ -31,8 +31,33 @@ export default function ContactPage({ onShowToast }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormSubmitted(true);
+    
+    // Format structured WhatsApp trade inquiry message
+    const whatsappNumber = '919876543210';
+    const messageText = `*NEW CONTACT / RFQ INQUIRY | PANKAJ OVERSEAS*
+━━━━━━━━━━━━━━━━━━━━
+👤 *Name:* ${formData.name}
+🏢 *Company:* ${formData.company}
+📧 *Email:* ${formData.email}
+📱 *Phone:* ${formData.phone}
+🚢 *Service:* ${formData.serviceType}
+🌾 *Commodity:* ${formData.commodity}
+⚓ *Incoterm:* ${formData.incoterm}
+📍 *Origin:* ${formData.origin}
+🎯 *Destination:* ${formData.destination || 'To be discussed'}
+📦 *Volume:* ${formData.volume || 'Standard Consignment'}
+📝 *Notes:* ${formData.notes || 'N/A'}
+━━━━━━━━━━━━━━━━━━━━
+_Sent via Pankaj Overseas Contact Portal_`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
     if (onShowToast) {
-      onShowToast(`RFQ inquiry submitted successfully for ${formData.commodity || 'your cargo'}! Our international trade desk will contact you within 4 hours.`);
+      onShowToast(`RFQ inquiry submitted! Opening WhatsApp Trade Desk for ${formData.commodity || 'your cargo'}...`);
     }
   };
 

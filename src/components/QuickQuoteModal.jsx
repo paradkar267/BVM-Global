@@ -24,7 +24,28 @@ export default function QuickQuoteModal({ isOpen, initialCommodity, prefillProdu
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Thank you! Your quotation request for ${formData.commodity || 'your cargo'} has been submitted to Pankaj Overseas Trade Desk.`;
+    
+    // Format structured WhatsApp trade inquiry message
+    const whatsappNumber = '919876543210';
+    const messageText = `*NEW TRADE INQUIRY | PANKAJ OVERSEAS*
+━━━━━━━━━━━━━━━━━━━━
+👤 *Name:* ${formData.name}
+🏢 *Company:* ${formData.company}
+📧 *Email:* ${formData.email}
+📱 *Phone:* ${formData.phone}
+🌾 *Commodity / Service:* ${formData.commodity || 'General Agro Commodity / Freight'}
+⚓ *Destination Port:* ${formData.destination}
+📦 *Message / Volume:* ${formData.message || 'N/A'}
+━━━━━━━━━━━━━━━━━━━━
+_Sent via Pankaj Overseas Online RFQ Desk_`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
+    const msg = `Quotation request generated! Redirecting to WhatsApp Trade Desk...`;
     if (onShowToast) onShowToast(msg);
     if (onSuccess) onSuccess(msg);
     onClose();

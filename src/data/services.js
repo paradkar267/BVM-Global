@@ -166,45 +166,49 @@ export const logisticsServices = [
 export const transportModes = [
   {
     id: 'sea',
+    watermark: 'SEA',
     name: 'SEA',
     title: 'Sea Freight',
     desc: 'Cost-effective and reliable shipping for bulk and large consignments.',
     tagline: 'High-Volume Global Ocean Liner Network',
-    capacity: 'Up to 24,000+ TEUs / Vessel',
+    capacity: 'Up to 24,000+ TEUs',
     transit: '12 - 35 Days (Global Destinations)',
     bestFor: 'Basmati Rice, Pulses, Grains, Bulk Spices, Raw Cotton',
     ports: 'JNPT (Mumbai), Mundra, Chennai, Cochin, Pipavav',
     icon: 'ship',
-    image: 'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=600&q=80'
+    image: '/assets/m1.png'
   },
   {
     id: 'air',
+    watermark: 'AIR',
     name: 'AIR',
     title: 'Air Freight',
     desc: 'Fast and secure delivery for time-sensitive cargo.',
     tagline: 'Expedited & Perishable Air Cargo Chain',
-    capacity: 'Up to 110 Metric Tons / Freighter',
+    capacity: 'Up to 110 Metric Tons',
     transit: '24 - 72 Hours Door-to-Airport',
     bestFor: 'Alphonso Mangoes, Pomegranates, Saffron, Cardamom, Samples',
     ports: 'Mumbai (BOM), Delhi (DEL), Hyderabad (HYD), Bengaluru (BLR)',
     icon: 'plane',
-    image: 'https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80'
+    image: '/assets/m2.png'
   },
   {
     id: 'road',
+    watermark: 'ROAD',
     name: 'ROAD',
     title: 'Road Transport',
     desc: 'Flexible and efficient logistics across India and beyond.',
     tagline: 'First-Mile Sourcing & Port Drayage',
-    capacity: '20ft / 40ft Trailers (Up to 32 MT Payload)',
+    capacity: '20ft',
     transit: '12 - 48 Hours Inland Transit',
     bestFor: 'Farm-to-Packhouse & Factory-to-Port Container Transit',
     ports: 'Nagpur Hub, Vidarbha Corridors, National Highways',
     icon: 'truck',
-    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80'
+    image: '/assets/m3.png'
   },
   {
     id: 'rail',
+    watermark: 'RAIL',
     name: 'RAIL',
     title: 'Rail Freight',
     desc: 'Eco-friendly and economical for bulk movement.',
@@ -214,7 +218,7 @@ export const transportModes = [
     bestFor: 'Heavy Commodities, Grain Sacks, Eco-friendly bulk haulage',
     ports: 'Nagpur ICD, JNPT Port Rail Terminal, Mundra DFC',
     icon: 'train',
-    image: 'https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=600&q=80'
+    image: '/assets/m4.png'
   }
 ];
 
@@ -249,50 +253,38 @@ export const whyChooseUsPillars = [
   {
     num: '01',
     icon: 'shield-check',
-    title: 'Reliable Movement',
-    desc: 'Predictable, on-schedule deliveries backed by guaranteed vessel slot allocations and priority freight lanes.',
-    highlight: 'Guaranteed Vessel Slots',
-    metric: '99.4% On-Time SLA'
+    title: 'Your requirements first',
+    desc: 'Every shipment starts with understanding your cargo, priorities and destination.'
   },
   {
     num: '02',
     icon: 'layers',
-    title: 'Multimodal Solutions',
-    desc: 'Integrated Sea, Air, Road and Rail infrastructure for complete flexibility and rapid intermodal switching.',
-    highlight: 'Sea • Air • Road • Rail',
-    metric: 'Seamless Intermodal'
+    title: 'Transport that fits',
+    desc: 'Sea, air, road or rail—coordinated around your shipment’s needs.'
   },
   {
     num: '03',
     icon: 'globe',
-    title: 'Global Reach',
-    desc: 'Established trade corridors connecting major Indian production belts to 45+ destination markets worldwide.',
-    highlight: '45+ Destination Ports',
-    metric: 'Global Freight Desk'
+    title: 'Connecting markets',
+    desc: 'Bringing sourcing and destination markets closer to your business.'
   },
   {
     num: '04',
-    icon: 'message-square',
-    title: 'Transparent Coordination',
-    desc: 'Direct communication, milestone status alerts, and dedicated export documentation specialists at every step.',
-    highlight: 'Milestone Alerts',
-    metric: 'Live Shipment Visibility'
+    icon: 'file-check',
+    title: 'Clear next steps',
+    desc: 'Understand what is needed, what is underway and what comes next.'
   },
   {
     num: '05',
-    icon: 'award',
-    title: 'Trade Expertise',
-    desc: 'Decades of agricultural commodity export mastery, APEDA compliance, and swift customs clearance processing.',
-    highlight: 'APEDA & Phytosanitary Certified',
-    metric: '30+ Yrs Trade Heritage'
+    icon: 'user',
+    title: 'Practical trade guidance',
+    desc: 'Make informed decisions with straightforward explanations and coordinated support.'
   },
   {
     num: '06',
     icon: 'users',
-    title: 'End-to-End Support',
-    desc: 'Single dedicated point of contact from farm-gate sourcing to port handling and final destination delivery.',
-    highlight: 'Dedicated Account Manager',
-    metric: 'Single SPOC Sourcing'
+    title: 'One point of contact',
+    desc: 'Keep conversations connected, from your first enquiry through shipment.'
   }
 ];
 

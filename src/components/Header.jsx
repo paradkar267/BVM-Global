@@ -32,12 +32,12 @@ export default function Header({ onOpenQuote }) {
     { path: '/contact', label: 'Contact Us' }
   ];
 
-  // Dark hero background only exists on Home page when at the top
-  const isDarkHero = location.pathname === '/' && !scrolled;
+  // Dark hero background exists on all pages when at the top
+  const isDarkHero = !scrolled;
 
   return (
     <>
-      <header className={`site-header ${scrolled ? 'scrolled' : ''} ${!isDarkHero ? 'light-mode' : ''}`} id="main-header">
+      <header className={`site-header ${scrolled ? 'scrolled' : ''}`} id="main-header">
         <div className="container-wide header-container">
           {/* Brand Logo Only (No text) */}
           <Link 
