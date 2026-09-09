@@ -7152,6 +7152,11 @@ textarea {
   box-shadow: 0 2px 6px rgba(22, 163, 74, 0.08);
 }
 
+.exact-about-feature-body {
+  display: flex;
+  flex-direction: column;
+}
+
 .exact-about-feature-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.05rem;
@@ -7283,7 +7288,7 @@ textarea {
 @media (max-width: 1100px) {
   .exact-about-grid {
     grid-template-columns: 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
   }
 
   .exact-about-left {
@@ -7291,59 +7296,161 @@ textarea {
   }
 
   .exact-about-frame-outer {
-    max-width: 500px;
+    max-width: 480px;
   }
 
-  .exact-about-world-deco {
+  .exact-about-world-deco,
+  .exact-about-vert-tag {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
-  .exact-about-features-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .exact-about-section {
+    padding: 3.5rem 0 0 0;
+  }
+
+  .exact-about-grid {
+    gap: 2.25rem;
+    padding-bottom: 3rem;
+  }
+
+  .exact-about-eyebrow {
+    margin-bottom: 0.85rem;
+  }
+
+  .exact-about-headline-partner,
+  .exact-about-headline-borders {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .exact-about-lead {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.85rem;
+  }
+
+  .exact-about-features-pipeline-wrap {
+    margin-bottom: 2rem;
   }
 
   .features-pipeline-line {
     display: none;
   }
 
-  .exact-about-stats-bar {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 0;
+  .exact-about-features-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
   }
 
+  .exact-about-feature-col {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.15rem;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(22, 163, 74, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+    backdrop-filter: blur(8px);
+  }
+
+  .exact-about-icon-circle {
+    margin-bottom: 0;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .exact-about-feature-body {
+    flex: 1;
+  }
+
+  .exact-about-feature-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+    color: #0F172A;
+  }
+
+  .exact-about-feature-desc {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.4;
+  }
+
+  .exact-about-feature-desc br {
+    display: none;
+  }
+
+  .exact-about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 0;
+  }
+
+  .exact-about-stat-col:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .exact-about-stat-col:nth-child(1),
   .exact-about-stat-col:nth-child(2) {
-    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 1.25rem;
   }
 }
 
 @media (max-width: 480px) {
+  .exact-about-frame-outer {
+    padding: 10px;
+    border-radius: 22px;
+  }
+
   .exact-about-img-card {
-    height: 420px;
+    height: 360px;
+    border-radius: 16px;
+  }
+
+  .exact-about-bottom-banner {
+    padding: 1rem 1.15rem;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .exact-banner-title {
+    font-size: 1.1rem;
+  }
+
+  .exact-banner-sub {
+    font-size: 0.76rem;
+  }
+
+  .exact-badge-apeda-pill {
+    bottom: 5.6rem;
+    left: 1rem;
+    padding: 0.35rem 0.65rem;
   }
 
   .exact-about-buttons-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 0.75rem;
   }
 
   .exact-btn-pill-dark,
   .exact-btn-pill-outline {
     width: 100%;
     justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
   }
 
-  .exact-about-stats-bar {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .exact-stat-number {
+    font-size: 2rem;
   }
 
-  .exact-about-stat-col:not(:last-child) {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 1.5rem;
+  .exact-stat-label {
+    font-size: 0.66rem;
   }
 }
 

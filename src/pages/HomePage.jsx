@@ -310,11 +310,13 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
                     <div className="exact-about-icon-circle">
                       <Leaf size={20} strokeWidth={2} />
                     </div>
-                    <h4 className="exact-about-feature-title">Direct farm sourcing</h4>
-                    <p className="exact-about-feature-desc">
-                      Traceable origins.<br />
-                      Trusted growers.
-                    </p>
+                    <div className="exact-about-feature-body">
+                      <h4 className="exact-about-feature-title">Direct farm sourcing</h4>
+                      <p className="exact-about-feature-desc">
+                        Traceable origins.<br />
+                        Trusted growers.
+                      </p>
+                    </div>
                   </div>
 
                   {/* 2. Multimodal freight */}
@@ -322,11 +324,13 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
                     <div className="exact-about-icon-circle">
                       <Ship size={20} strokeWidth={2} />
                     </div>
-                    <h4 className="exact-about-feature-title">Multimodal freight</h4>
-                    <p className="exact-about-feature-desc">
-                      Seamless sea, air, road<br />
-                      and rail connections.
-                    </p>
+                    <div className="exact-about-feature-body">
+                      <h4 className="exact-about-feature-title">Multimodal freight</h4>
+                      <p className="exact-about-feature-desc">
+                        Seamless sea, air, road<br />
+                        and rail connections.
+                      </p>
+                    </div>
                   </div>
 
                   {/* 3. Certified quality */}
@@ -334,11 +338,13 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
                     <div className="exact-about-icon-circle">
                       <ShieldCheck size={20} strokeWidth={2} />
                     </div>
-                    <h4 className="exact-about-feature-title">Certified quality</h4>
-                    <p className="exact-about-feature-desc">
-                      APEDA-certified.<br />
-                      Export-ready.
-                    </p>
+                    <div className="exact-about-feature-body">
+                      <h4 className="exact-about-feature-title">Certified quality</h4>
+                      <p className="exact-about-feature-desc">
+                        APEDA-certified.<br />
+                        Export-ready.
+                      </p>
+                    </div>
                   </div>
 
                 </div>
