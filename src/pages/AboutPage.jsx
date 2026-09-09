@@ -324,12 +324,6 @@ export default function AboutPage({ onOpenQuote }) {
                   className="heritage-photo-img"
                 />
                 <div className="heritage-photo-overlay"></div>
-                
-                {/* Floating Badge */}
-                <div className="heritage-photo-badge">
-                  <span className="heritage-photo-badge-dot"></span>
-                  <span>100% DIRECT ORIGIN TRACEABILITY</span>
-                </div>
 
                 <div className="heritage-photo-caption">
                   <span className="heritage-caption-title">Field Inspection & Zero-Middlemen Sourcing</span>

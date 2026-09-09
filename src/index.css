@@ -4613,17 +4613,37 @@ textarea {
   position: relative;
   background-color: #F8FAF8;
   background-image: url('/assets/soft.png');
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: clamp(3.5rem, 5.5vw, 5.5rem) 0 clamp(4.5rem, 7vw, 7rem) 0;
+  padding: clamp(4rem, 6vw, 6rem) 0 clamp(5rem, 7.5vw, 7.5rem) 0;
   overflow: hidden;
 }
 
-@media (max-width: 1024px) {
-  .about-gallery-section {
-    background-size: cover;
-  }
+/* Smooth top fade into previous section */
+.about-gallery-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Smooth bottom fade into next section */
+.about-gallery-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(0deg, #F8FBF8 0%, rgba(248, 251, 248, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Floating Decorative Labels */
@@ -6515,7 +6535,28 @@ textarea {
   background-size: cover;
   padding: clamp(4rem, 6.5vw, 6rem) 0 0 0;
   overflow: hidden;
-  border-top: 1px solid #E2E8F0;
+}
+
+/* Smooth top fade into previous multimodal section */
+.exact-about-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, #FAFCFA 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Smooth bottom fade into next section */
+.exact-about-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 90px;
+  background: linear-gradient(0deg, #FFFFFF 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .exact-about-container {
@@ -7546,6 +7587,28 @@ textarea {
   background-position: center bottom;
   padding: clamp(5rem, 8vw, 7rem) 0 clamp(6rem, 9vw, 9rem) 0;
   overflow: hidden;
+}
+
+/* Smooth top fade into previous section */
+.about-journey-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #F8FAF8 0%, rgba(248, 250, 248, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Smooth bottom fade into next section */
+.about-journey-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 120px;
+  background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .journey-inner-container {
@@ -8588,13 +8651,39 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: clamp(4.5rem, 7vw, 6.5rem) 0 clamp(3.5rem, 5vw, 5rem) 0;
+  padding: clamp(5rem, 7.5vw, 7rem) 0 clamp(4rem, 6vw, 5.5rem) 0;
   overflow: hidden;
+}
+
+/* Smooth top fade into previous gallery section */
+.what-drives-us-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(180deg, #F8FBF8 0%, rgba(248, 251, 248, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Smooth bottom fade into next timeline section */
+.what-drives-us-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(0deg, #F8FAF8 0%, rgba(248, 250, 248, 0) 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .what-drives-us-container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1240px;
   margin: 0 auto;
 }
@@ -9006,8 +9095,30 @@ textarea {
     radial-gradient(rgba(13, 122, 71, 0.04) 1px, transparent 1px),
     linear-gradient(180deg, #FFFFFF 0%, #F5FAF6 50%, #FFFFFF 100%);
   background-size: 24px 24px, 100% 100%;
-  padding: clamp(3.5rem, 5.5vw, 5.5rem) 0 clamp(4rem, 6vw, 6rem) 0;
+  padding: clamp(4rem, 6vw, 6rem) 0 clamp(4.5rem, 6.5vw, 6.5rem) 0;
   overflow: hidden;
+}
+
+/* Smooth top fade from Hero */
+.modes-exact-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 90px;
+  background: linear-gradient(180deg, #FFFFFF 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Smooth bottom fade into next section */
+.modes-exact-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 90px;
+  background: linear-gradient(0deg, #FAFCFA 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .modes-exact-container {
