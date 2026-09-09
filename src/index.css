@@ -8275,22 +8275,148 @@ textarea {
 }
 
 @media (max-width: 1100px) {
-  .journey-columns-row {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .journey-staggered-roadmap {
+    margin-top: 2.25rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   .journey-wave-track {
     display: none;
   }
+
+  .journey-columns-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  /* Continuous Connected Timeline Track */
+  .journey-columns-row::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 32px;
+    bottom: 35px;
+    width: 2.5px;
+    background: linear-gradient(180deg, #10B981 0%, #059669 50%, #047857 100%);
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .journey-col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .journey-col--top,
   .journey-col--bottom {
     margin-top: 0;
+    justify-content: flex-start;
   }
+
+  /* Pinned Node on Timeline Track */
+  .journey-node-anchor {
+    position: absolute;
+    left: -2.5rem;
+    top: 27px;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(calc(11px - 50%));
+    z-index: 3;
+  }
+
+  .journey-node-label {
+    display: none;
+  }
+
+  .journey-node-dot {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #10B981;
+    border: 3.5px solid #FFFFFF;
+    box-shadow: 0 0 0 2px #10B981, 0 3px 8px rgba(16, 185, 129, 0.45);
+    flex-shrink: 0;
+  }
+
+  .journey-node-dot.featured {
+    background-color: #052E16;
+    border: 3.5px solid #FFFFFF;
+    box-shadow: 0 0 0 3px #10B981, 0 0 14px rgba(16, 185, 129, 0.7);
+  }
+
+  .journey-milestone-card {
+    min-height: auto;
+    padding: 1.35rem 1.25rem;
+  }
+
   .journey-deco-farms,
   .journey-deco-script,
   .journey-deco-spices,
   .journey-deco-bridging,
   .journey-deco-container {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-journey-section {
+    padding: clamp(3.5rem, 6vw, 4.5rem) 0 clamp(4rem, 7vw, 5rem) 0;
+  }
+
+  .journey-header {
+    margin-bottom: 2rem;
+  }
+
+  .journey-columns-row {
+    padding-left: 2.1rem;
+    gap: 1.35rem;
+  }
+
+  .journey-columns-row::before {
+    left: 8px;
+    top: 26px;
+    bottom: 30px;
+    width: 2px;
+  }
+
+  .journey-node-anchor {
+    left: -2.1rem;
+    top: 24px;
+    transform: translateX(calc(9px - 50%));
+  }
+
+  .journey-node-dot {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+  }
+
+  .journey-milestone-card {
+    padding: 1.15rem 1rem;
+    border-radius: 16px;
+  }
+
+  .journey-card-year {
+    font-size: 1.45rem;
+  }
+
+  .journey-card-title {
+    font-size: 0.94rem;
+  }
+
+  .journey-card-desc {
+    font-size: 0.82rem;
+    margin-bottom: 0.95rem;
   }
 }
 
