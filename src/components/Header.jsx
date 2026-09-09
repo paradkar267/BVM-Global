@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, Menu, X, ChevronRight } from 'lucide-react';
+import { ArrowRight, Menu, X, ChevronRight, Phone, Mail, ShieldCheck } from 'lucide-react';
 
 export default function Header({ onOpenQuote }) {
   const [scrolled, setScrolled] = useState(false);
@@ -104,32 +104,35 @@ export default function Header({ onOpenQuote }) {
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer Backdrop (Clicking outside closes drawer) */}
+      <div 
+        className={`mobile-drawer-backdrop ${drawerOpen ? 'open' : ''}`}
+        onClick={() => setDrawerOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Mobile Off-Canvas Half-Width Drawer */}
       <div className={`mobile-drawer ${drawerOpen ? 'open' : ''}`}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" onClick={() => setDrawerOpen(false)} style={{ display: 'flex', alignItems: 'center' }}>
+        
+        {/* Drawer Header */}
+        <div className="mobile-drawer-header">
+          <Link to="/" onClick={() => setDrawerOpen(false)} className="mobile-drawer-logo">
             <img 
               src="/assets/pankaj_logo_white.png" 
               alt="Pankaj Overseas" 
-              style={{
-                height: '95px',
-                width: 'auto',
-                maxHeight: '95px',
-                objectFit: 'contain',
-                display: 'block',
-                filter: 'brightness(0) invert(1)'
-              }}
             />
           </Link>
           <button 
+            className="mobile-drawer-close-btn"
             onClick={() => setDrawerOpen(false)}
-            style={{ background: 'none', border: 'none', color: '#FFFFFF', cursor: 'pointer', padding: '0.5rem' }}
+            aria-label="Close navigation"
           >
-            <X style={{ width: 28, height: 28 }} />
+            <X size={20} />
           </button>
         </div>
 
-        <div className="mobile-nav-list">
+        {/* Navigation List */}
+        <nav className="mobile-nav-list">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -137,27 +140,45 @@ export default function Header({ onOpenQuote }) {
               className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
             >
               <span>{link.label}</span>
-              <ChevronRight />
+              <ChevronRight size={18} className="mobile-nav-chevron" />
             </Link>
           ))}
-        </div>
+        </nav>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        {/* Drawer Footer Info & CTA */}
+        <div className="mobile-drawer-footer">
+          <div className="mobile-drawer-badge">
+            <ShieldCheck size={14} />
+            <span>APEDA & Spices Certified Export House</span>
+          </div>
+
+          <div className="mobile-drawer-contact-info">
+            <a href="tel:+919876543210" className="mobile-drawer-contact-item">
+              <Phone size={13} />
+              <span>+91 98765 43210</span>
+            </a>
+            <a href="mailto:exports@pankajoverseas.com" className="mobile-drawer-contact-item">
+              <Mail size={13} />
+              <span>exports@pankajoverseas.com</span>
+            </a>
+          </div>
+
           <button 
-            className="btn btn-primary" 
+            className="btn btn-primary btn-pill-gold mobile-drawer-cta" 
             onClick={() => {
               setDrawerOpen(false);
               onOpenQuote();
             }}
-            style={{ width: '100%' }}
           >
             <span>Request a Quote</span>
-            <ArrowRight style={{ width: 16, height: 16 }} />
+            <ArrowRight size={15} />
           </button>
-          <div style={{ fontSize: '0.75rem', color: '#94A3B8', textAlign: 'center' }}>
-            HQ: Nagpur, Maharashtra, India | +91 98765 43210
+
+          <div className="mobile-drawer-hq">
+            HQ: Nagpur Zero-Mile Hub, Maharashtra, India
           </div>
         </div>
+
       </div>
     </>
   );
