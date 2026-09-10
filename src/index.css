@@ -8652,7 +8652,7 @@ textarea {
 
 .cert-eyebrow {
   font-family: var(--font-mono, monospace);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: #15803D;
   letter-spacing: 0.16em;
@@ -8675,7 +8675,7 @@ textarea {
   color: #072615;
   line-height: 1.1;
   letter-spacing: -0.025em;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.85rem 0;
 }
 
 .cert-title-italic {
@@ -8691,7 +8691,7 @@ textarea {
   color: #4B5E73;
   line-height: 1.65;
   max-width: 440px;
-  margin: 0 0 1.75rem 0;
+  margin: 0 0 2rem 0;
   font-weight: 450;
 }
 
@@ -8705,7 +8705,6 @@ textarea {
   height: auto;
   object-fit: contain;
   mix-blend-mode: multiply;
-  filter: drop-shadow(0 14px 28px rgba(13, 122, 71, 0.1));
   transition: transform 0.35s ease;
 }
 
@@ -8713,7 +8712,7 @@ textarea {
   transform: scale(1.02);
 }
 
-/* Right Column: 2x2 Grid with clean subtle borders */
+/* Right Column: 2x2 Grid matching reference exactly */
 .cert-right-grid-wrap {
   width: 100%;
 }
@@ -8722,76 +8721,63 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 1.5px solid rgba(22, 163, 74, 0.25);
-  border-radius: 28px;
+  border-radius: 24px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 20px 48px -12px rgba(13, 122, 71, 0.08), 0 2px 8px rgba(0, 0, 0, 0.02);
+  background: #FFFFFF;
+  box-shadow: 0 16px 40px -12px rgba(13, 122, 71, 0.08);
 }
 
 .cert-card-box {
-  padding: clamp(1.6rem, 2.5vw, 2.35rem) clamp(1.3rem, 2vw, 2rem);
+  padding: clamp(1.75rem, 2.8vw, 2.5rem) clamp(1.5rem, 2.2vw, 2.25rem);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   transition: background 0.3s ease, transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.65);
+  background: #FFFFFF;
 }
 
 .cert-card-box:hover {
-  background: rgba(255, 255, 255, 0.98);
+  background: #F9FCF9;
 }
 
-/* Cell borders to form the 2x2 grid */
+/* Cell divider lines (1 horizontal, 1 vertical) */
 .cell-top-left {
-  border-right: 1.5px solid rgba(22, 163, 74, 0.22);
-  border-bottom: 1.5px solid rgba(22, 163, 74, 0.22);
+  border-right: 1.5px solid rgba(22, 163, 74, 0.2);
+  border-bottom: 1.5px solid rgba(22, 163, 74, 0.2);
 }
 
 .cell-top-right {
-  border-bottom: 1.5px solid rgba(22, 163, 74, 0.22);
+  border-bottom: 1.5px solid rgba(22, 163, 74, 0.2);
 }
 
 .cell-bottom-left {
-  border-right: 1.5px solid rgba(22, 163, 74, 0.22);
+  border-right: 1.5px solid rgba(22, 163, 74, 0.2);
 }
 
 .cell-bottom-right {
-  /* No additional border needed */
+  /* No additional border */
 }
 
 .cert-card-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 1.25rem;
   gap: 1rem;
 }
 
 .cert-card-img-wrap {
-  width: 82px;
-  height: 82px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, #F0FDF4 0%, #E6F7EC 100%);
-  border: 1px solid rgba(22, 163, 74, 0.18);
-  border-radius: 18px;
-  padding: 8px;
-  box-shadow: 0 4px 14px rgba(13, 122, 71, 0.06);
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
-}
-
-.cert-card-box:hover .cert-card-img-wrap {
-  transform: translateY(-2px);
-  background: linear-gradient(145deg, #E2F8E9 0%, #DCFCE7 100%);
-  border-color: rgba(22, 163, 74, 0.32);
+  justify-content: flex-start;
+  background: transparent;
 }
 
 .cert-card-img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
   transition: transform 0.3s ease;
@@ -8805,18 +8791,17 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.3rem 0.85rem;
+  padding: 0.24rem 0.75rem;
   border-radius: 9999px;
   border: 1.5px solid #16A34A;
   color: #15803D;
   font-family: var(--font-sans);
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: #DCFCE7;
+  background: rgba(22, 163, 74, 0.04);
   flex-shrink: 0;
-  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.08);
 }
 
 .cert-card-name {
@@ -8870,7 +8855,7 @@ textarea {
   .cell-top-right,
   .cell-bottom-left {
     border-right: none;
-    border-bottom: 1.5px solid rgba(22, 163, 74, 0.22);
+    border-bottom: 1.5px solid rgba(22, 163, 74, 0.2);
   }
 }
 
