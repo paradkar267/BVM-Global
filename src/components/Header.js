@@ -68,7 +68,7 @@ export function renderHeader(currentRoute = 'home') {
           <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
         </button>
         <div style="font-size: 0.75rem; color: #94A3B8; text-align: center;">
-          HQ: Nagpur, Maharashtra, India | +91 98765 43210
+          HQ: Nagpur, Maharashtra, India | +91 95189 46362
         </div>
       </div>
     </div>

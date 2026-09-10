@@ -41,7 +41,7 @@ export default function ContactPage({ onShowToast }) {
     setFormSubmitted(true);
     
     // Format structured WhatsApp trade inquiry message
-    const whatsappNumber = '919876543210';
+    const whatsappNumber = '919518946362';
     const messageText = `*NEW CONTACT / RFQ INQUIRY | PANKAJ OVERSEAS EXPORTS*
 ━━━━━━━━━━━━━━━━━━━━
 👤 *Name:* ${formData.name}
@@ -356,11 +356,11 @@ _Sent via Pankaj Overseas Exports Contact Portal_`;
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.875rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1.25rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <Phone style={{ width: 16, height: 16, color: '#4ADE80' }} />
-                    <span style={{ color: '#FFFFFF', fontWeight: 600 }}>+91 98765 43210</span>
+                    <a href="tel:+919518946362" style={{ color: '#FFFFFF', fontWeight: 600, textDecoration: 'none' }}>+91 95189 46362</a>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <Mail style={{ width: 16, height: 16, color: '#4ADE80' }} />
-                    <span style={{ color: '#FFFFFF' }}>info@pankajoverseas.com</span>
+                    <a href="mailto:PankajoverseasExports@gmail.com" style={{ color: '#FFFFFF', textDecoration: 'none' }}>PankajoverseasExports@gmail.com</a>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <Clock style={{ width: 16, height: 16, color: '#4ADE80' }} />
@@ -370,7 +370,7 @@ _Sent via Pankaj Overseas Exports Contact Portal_`;
 
                 <div style={{ marginTop: '1.5rem' }}>
                   <a 
-                    href="https://wa.me/919876543210" 
+                    href="https://wa.me/919518946362" 
                     target="_blank" 
                     rel="noreferrer"
                     className="btn btn-secondary-dark btn-sm"
@@ -410,10 +410,10 @@ _Sent via Pankaj Overseas Exports Contact Portal_`;
         </div>
       </section>
 
-      {/* 3. FAQ ACCORDION SECTION */}
-      <section className="section-padding" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="container-wide" style={{ maxWidth: 850 }}>
-          <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 3.5rem auto' }}>
+      {/* 3. FAQ ACCORDION SECTION WITH RICH BACKGROUND */}
+      <section className="contact-faq-section">
+        <div className="container-wide contact-faq-container">
+          <div className="contact-faq-header">
             <div className="section-eyebrow">
               <HelpCircle style={{ width: 15, height: 15 }} />
               <span>FREQUENTLY ASKED QUESTIONS</span>
@@ -421,51 +421,34 @@ _Sent via Pankaj Overseas Exports Contact Portal_`;
             <h2 className="section-heading">
               International Trade & <span className="highlight-gold">Export FAQs</span>
             </h2>
-            <p className="section-subtitle" style={{ margin: '0.5rem auto 0 auto' }}>
+            <p className="section-subtitle">
               Answers to common queries regarding ordering procedures, MOQs, quality inspections, and shipping timelines.
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div className="contact-faq-list">
             {faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
                 <div 
                   key={idx}
-                  style={{
-                    borderRadius: 'var(--radius-lg)',
-                    border: '1px solid #E2E8F0',
-                    overflow: 'hidden',
-                    background: isOpen ? '#F8FAFC' : '#FFFFFF',
-                    transition: 'all var(--transition-fast)'
-                  }}
+                  className={`faq-card-item ${isOpen ? 'is-open' : ''}`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? -1 : idx)}
-                    style={{
-                      width: '100%',
-                      padding: '1.25rem 1.5rem',
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      background: 'none',
-                      border: 'none',
-                      textAlign: 'left',
-                      cursor: 'pointer'
-                    }}
+                    className="faq-toggle-btn"
+                    aria-expanded={isOpen}
                   >
-                    <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '1rem', color: '#0F172A', paddingRight: '1rem' }}>
+                    <span className="faq-question-text">
                       {faq.q}
                     </span>
-                    {isOpen ? (
-                      <ChevronUp style={{ width: 20, height: 20, color: 'var(--accent-gold)', flexShrink: 0 }} />
-                    ) : (
-                      <ChevronDown style={{ width: 20, height: 20, color: '#64748B', flexShrink: 0 }} />
-                    )}
+                    <div className="faq-icon-bubble">
+                      <ChevronDown style={{ width: 18, height: 18 }} />
+                    </div>
                   </button>
 
                   {isOpen && (
-                    <div style={{ padding: '0 1.5rem 1.25rem 1.5rem', color: '#475569', fontSize: '0.875rem', lineHeight: 1.65, borderTop: '1px solid #E2E8F0', paddingTop: '1rem' }}>
+                    <div className="faq-answer-body">
                       {faq.a}
                     </div>
                   )}

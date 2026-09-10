@@ -56,7 +56,7 @@ export function renderFooter() {
             <div class="footer-contact-item">
               <i data-lucide="phone" style="width: 18px; height: 18px;"></i>
               <div>
-                <span style="display: block; font-weight: 600; color: #FFFFFF;">+91 98765 43210</span>
+                <span style="display: block; font-weight: 600; color: #FFFFFF;">+91 95189 46362</span>
                 <span style="font-size: 0.75rem; color: #94A3B8;">Mon - Sat, 9:00 AM - 7:00 PM IST</span>
               </div>
             </div>
@@ -64,8 +64,8 @@ export function renderFooter() {
             <div class="footer-contact-item">
               <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
               <div>
-                <span style="display: block; font-weight: 600; color: #FFFFFF;">info@pankajoverseas.com</span>
-                <span style="font-size: 0.75rem; color: #94A3B8;">Trade Desk: export@pankajoverseas.com</span>
+                <span style="display: block; font-weight: 600; color: #FFFFFF;">PankajoverseasExports@gmail.com</span>
+                <span style="font-size: 0.75rem; color: #94A3B8;">Trade Desk: PankajoverseasExports@gmail.com</span>
               </div>
             </div>
 
@@ -85,7 +85,11 @@ export function renderFooter() {
         <!-- Footer Bottom Bar -->
         <div class="footer-bottom-bar">
           <div>
-            © 2026 Pankaj Overseas. All rights reserved. Connecting Indian Sourcing to Global Markets.
+            © 2026 Pankaj Overseas Exports. All rights reserved. Connecting Indian Sourcing to Global Markets.
+          </div>
+
+          <div class="footer-credit">
+            Website Designed & Developed by <a href="https://bizleap.in" target="_blank" rel="noopener noreferrer" class="bizleap-backlink" title="Bizleap - Digital Marketing & Web Development Agency">Bizleap</a>
           </div>
 
           <div style="display: flex; gap: 1.5rem;">

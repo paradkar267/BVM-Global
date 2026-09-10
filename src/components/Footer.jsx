@@ -95,7 +95,7 @@ export default function Footer() {
               </a>
 
               <a 
-                href="https://wa.me/919876543210" 
+                href="https://wa.me/919518946362" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer-social-btn footer-social-wa" 
@@ -160,12 +160,12 @@ export default function Footer() {
             <div className="footer-contact-list">
               <div className="footer-contact-line">
                 <Phone style={{ width: 14, height: 14, color: '#4ADE80', flexShrink: 0 }} />
-                <a href="tel:+919876543210" className="contact-link">+91 98765 43210</a>
+                <a href="tel:+919518946362" className="contact-link">+91 95189 46362</a>
               </div>
 
               <div className="footer-contact-line">
                 <Mail style={{ width: 14, height: 14, color: '#34D399', flexShrink: 0 }} />
-                <a href="mailto:info@pankajoverseas.com" className="contact-link">info@pankajoverseas.com</a>
+                <a href="mailto:PankajoverseasExports@gmail.com" className="contact-link">PankajoverseasExports@gmail.com</a>
               </div>
 
               <div className="footer-contact-line">
@@ -180,6 +180,19 @@ export default function Footer() {
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
             © {new Date().getFullYear()} <strong>Pankaj Overseas Exports</strong>. All rights reserved.
+          </div>
+
+          <div className="footer-credit">
+            Website Designed & Developed by{' '}
+            <a 
+              href="https://bizleap.in" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="bizleap-backlink"
+              title="Bizleap - Digital Marketing & Web Development Agency"
+            >
+              Bizleap
+            </a>
           </div>
 
           <div className="footer-legal-links">

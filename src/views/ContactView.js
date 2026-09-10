@@ -50,8 +50,8 @@ export function renderContactView() {
               Direct Phone & WhatsApp
             </h3>
             <p style="font-size: 0.875rem; color: var(--text-dark-muted); line-height: 1.6; margin-bottom: 1rem;">
-              International Trade Desk: <strong>+91 98765 43210</strong><br>
-              Logistics Coordination: <strong>+91 98765 43211</strong>
+              International Trade Desk: <strong>+91 95189 46362</strong><br>
+              Logistics Coordination: <strong>+91 95189 46362</strong>
             </p>
             <div style="font-size: 0.75rem; color: var(--text-dark-muted);">
               Available Mon - Sat, 09:00 - 19:00 IST
@@ -67,8 +67,8 @@ export function renderContactView() {
               Email Inquiries
             </h3>
             <p style="font-size: 0.875rem; color: var(--text-dark-muted); line-height: 1.6; margin-bottom: 1rem;">
-              General Inquiries: <strong>info@pankajoverseas.com</strong><br>
-              RFQ & Export Desk: <strong>export@pankajoverseas.com</strong>
+              General Inquiries: <strong>PankajoverseasExports@gmail.com</strong><br>
+              RFQ & Export Desk: <strong>PankajoverseasExports@gmail.com</strong>
             </p>
             <div style="font-size: 0.75rem; color: var(--accent-emerald); font-weight: 600;">
               Guaranteed 24-Hour Response

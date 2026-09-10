@@ -23,13 +23,13 @@ export function renderQuoteSection() {
             </p>
 
             <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="tel:+919876543210" class="btn btn-secondary-dark">
+              <a href="tel:+919518946362" class="btn btn-secondary-dark">
                 <i data-lucide="phone" style="width: 16px; height: 16px; color: var(--accent-gold);"></i>
-                <span>+91 98765 43210</span>
+                <span>+91 95189 46362</span>
               </a>
-              <a href="mailto:info@pankajoverseas.com" class="btn btn-secondary-dark">
+              <a href="mailto:PankajoverseasExports@gmail.com" class="btn btn-secondary-dark">
                 <i data-lucide="mail" style="width: 16px; height: 16px; color: var(--accent-cyan);"></i>
-                <span>info@pankajoverseas.com</span>
+                <span>PankajoverseasExports@gmail.com</span>
               </a>
             </div>
 

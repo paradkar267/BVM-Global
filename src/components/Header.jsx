@@ -148,13 +148,13 @@ export default function Header({ onOpenQuote }) {
           </div>
 
           <div className="mobile-drawer-contact-info">
-            <a href="tel:+919876543210" className="mobile-drawer-contact-item">
+            <a href="tel:+919518946362" className="mobile-drawer-contact-item">
               <Phone size={13} />
-              <span>+91 98765 43210</span>
+              <span>+91 95189 46362</span>
             </a>
-            <a href="mailto:exports@pankajoverseas.com" className="mobile-drawer-contact-item">
+            <a href="mailto:PankajoverseasExports@gmail.com" className="mobile-drawer-contact-item">
               <Mail size={13} />
-              <span>exports@pankajoverseas.com</span>
+              <span>PankajoverseasExports@gmail.com</span>
             </a>
           </div>
 

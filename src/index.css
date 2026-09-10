@@ -2309,6 +2309,34 @@ textarea {
   font-weight: 600;
 }
 
+.footer-credit {
+  color: #94A3B8;
+  font-size: 0.76rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.bizleap-backlink {
+  color: #86EFAC;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.bizleap-backlink:hover {
+  color: #FFFFFF;
+  background: #15803D;
+  border-color: #22C55E;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.35);
+  transform: translateY(-1px);
+}
+
 .footer-legal-links {
   display: flex;
   align-items: center;
@@ -4993,7 +5021,7 @@ textarea {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  padding: clamp(4rem, 6vw, 6rem) 0 clamp(5rem, 7.5vw, 7.5rem) 0;
+  padding: clamp(2.5rem, 4vw, 3.5rem) 0 clamp(1.75rem, 3vw, 2.5rem) 0;
   overflow: hidden;
 }
 
@@ -5201,7 +5229,7 @@ textarea {
 .gallery-image-box {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: clamp(230px, 28vw, 260px);
   overflow: hidden;
   background: #081320;
 }
@@ -5210,6 +5238,7 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -5408,9 +5437,9 @@ textarea {
   position: relative;
   background: #FFFFFF;
   border-radius: 24px;
-  max-width: 800px;
+  max-width: 860px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 92vh;
   overflow-y: auto;
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.5);
   animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -5457,15 +5486,36 @@ textarea {
 .gallery-modal-image-wrap {
   position: relative;
   width: 100%;
-  height: clamp(260px, 34vw, 380px);
-  background: #081320;
+  height: clamp(340px, 56vh, 520px);
+  background: #061A10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.gallery-modal-image-wrap img {
-  width: 100%;
+.gallery-modal-bg-blur {
+  position: absolute;
+  inset: -25px;
+  background-size: cover;
+  background-position: center top;
+  filter: blur(30px) brightness(0.35);
+  transform: scale(1.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-modal-main-img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
 }
 
 .gallery-modal-badge {
@@ -5565,7 +5615,7 @@ textarea {
   }
 
   .gallery-modal-image-wrap {
-    height: 240px;
+    height: clamp(280px, 45vh, 380px);
   }
 
   .gallery-modal-content {
@@ -7897,19 +7947,21 @@ textarea {
 }
 
 .story-photo-card {
-  border-radius: 12px 36px 12px 12px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 16px 40px -10px rgba(7, 38, 21, 0.16);
-  display: flex;
-  flex-direction: column;
-  background: #072615;
+  box-shadow: 0 20px 45px -12px rgba(7, 38, 21, 0.2);
+  display: block;
+  border: 1px solid rgba(22, 163, 74, 0.15);
+  height: 100%;
 }
 
 .story-main-photo {
   width: 100%;
-  height: 380px;
+  height: 100%;
+  min-height: 420px;
+  max-height: 520px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   display: block;
 }
 
@@ -8105,59 +8157,6 @@ textarea {
 }
 
 /* ==========================================================================
-   ABOUT JOURNEY / TIMELINE SECTION (EXECUTIVE GRAPHIC ROADMAP)
-   ========================================================================== */
-.about-journey-section {
-  position: relative;
-  background: linear-gradient(180deg, #FFFFFF 0%, #F6FAF7 50%, #FFFFFF 100%);
-  background-image:
-    radial-gradient(rgba(22, 163, 74, 0.07) 1.2px, transparent 1.2px),
-    linear-gradient(180deg, #FFFFFF 0%, #F6FAF7 50%, #FFFFFF 100%);
-  background-size: 28px 28px, 100% 100%;
-  padding: clamp(5.5rem, 8vw, 7.5rem) 0;
-  overflow: hidden;
-}
-
-/* Smooth top fade */
-.about-journey-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 90px;
-  background: linear-gradient(to bottom, #FFFFFF, transparent);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Smooth bottom fade */
-.about-journey-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 90px;
-  background: linear-gradient(to top, #F8FAFC, transparent);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.journey-ambient-glow {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 450px;
-  background: radial-gradient(ellipse, rgba(74, 222, 128, 0.12) 0%, transparent 70%);
-  pointer-events: none;
-  border-radius: 50%;
-  filter: blur(60px);
-}
-
-/* ==========================================================================
    COMPANY TIMELINE / MILESTONES (EXECUTIVE GRAPHIC ROADMAP WITH BACKG.PNG)
    ========================================================================== */
 .about-journey-section {
@@ -8167,7 +8166,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  padding: clamp(5rem, 8vw, 7rem) 0 clamp(6rem, 9vw, 9rem) 0;
+  padding: clamp(1.75rem, 2.8vw, 2.5rem) 0 clamp(2.5rem, 4vw, 3.5rem) 0;
   overflow: hidden;
 }
 
@@ -8205,7 +8204,7 @@ textarea {
 /* Decorative Floating Typography */
 .journey-deco-farms {
   position: absolute;
-  top: 6.5rem;
+  top: 2rem;
   left: 3.5rem;
   display: flex;
   flex-direction: column;
@@ -8232,7 +8231,7 @@ textarea {
 
 .journey-deco-script {
   position: absolute;
-  top: 5rem;
+  top: 1.75rem;
   right: 5rem;
   display: flex;
   flex-direction: column;
@@ -8299,7 +8298,7 @@ textarea {
 .journey-header {
   text-align: center;
   max-width: 780px;
-  margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+  margin: 0 auto clamp(1.5rem, 2.5vw, 2.25rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8311,16 +8310,16 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.45rem 1.15rem;
+  padding: 0.35rem 0.95rem;
   background: rgba(22, 163, 74, 0.08);
   border: 1px solid rgba(22, 163, 74, 0.25);
   border-radius: 9999px;
   color: #15803D;
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   box-shadow: 0 2px 8px rgba(22, 163, 74, 0.06);
 }
 
@@ -8764,7 +8763,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: clamp(5.5rem, 8vw, 7.5rem) 0 clamp(4.5rem, 6vw, 6.5rem) 0;
+  padding: clamp(2.75rem, 4.5vw, 4rem) 0 clamp(1.5rem, 2.5vw, 2.25rem) 0;
   overflow: hidden;
   border: none;
 }
@@ -8806,7 +8805,7 @@ textarea {
   grid-template-columns: 1fr 1.3fr;
   gap: clamp(2.5rem, 5vw, 5rem);
   align-items: center;
-  margin-bottom: clamp(3.5rem, 5.5vw, 5.5rem);
+  margin-bottom: clamp(1.25rem, 2vw, 1.75rem);
 }
 
 /* Left Hero Column */
@@ -9034,13 +9033,13 @@ textarea {
     linear-gradient(135deg, #0D5C3A 0%, #0A4328 45%, #062F1C 100%);
   border: 1.5px solid rgba(74, 222, 128, 0.35);
   border-radius: 24px;
-  padding: clamp(2.25rem, 4vw, 3.25rem);
+  padding: clamp(1.35rem, 2.2vw, 1.85rem) clamp(1.5rem, 3vw, 2.5rem);
   box-shadow: 0 20px 45px -10px rgba(13, 92, 58, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
   overflow: hidden;
 }
 
@@ -9052,7 +9051,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.32rem 0.85rem;
+  padding: 0.28rem 0.75rem;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.24);
@@ -9063,16 +9062,16 @@ textarea {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.12em;
-  margin-bottom: 0.95rem;
+  margin-bottom: 0.45rem;
   text-transform: uppercase;
 }
 
 .compliance-cta-title {
   font-family: var(--font-display, 'Outfit', sans-serif);
-  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
   font-weight: 800;
   color: #FFFFFF;
-  margin: 0 0 0.65rem 0;
+  margin: 0 0 0.4rem 0;
   line-height: 1.25;
   letter-spacing: -0.02em;
 }
@@ -9171,7 +9170,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: clamp(5rem, 7.5vw, 7rem) 0 clamp(4rem, 6vw, 5.5rem) 0;
+  padding: clamp(2rem, 3.5vw, 3rem) 0 clamp(1rem, 1.8vw, 1.5rem) 0;
   overflow: hidden;
 }
 
@@ -9603,7 +9602,7 @@ textarea {
 
 /* Bottom branding */
 .drives-bottom-branding {
-  margin-top: 2.75rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -11295,6 +11294,150 @@ textarea {
   .bvm-footer-line {
     display: none;
   }
+}
+
+/* ===================================================
+   CONTACT PAGE — FAQ ACCORDION SECTION (RICH EXECUTIVE BACKGROUND)
+   =================================================== */
+.contact-faq-section {
+  position: relative;
+  background-color: #F8FAF8;
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 15%, rgba(34, 197, 94, 0.08) 0%, transparent 65%),
+    url('/assets/about.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: clamp(3.5rem, 5.5vw, 5rem) 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(22, 163, 74, 0.15);
+}
+
+.contact-faq-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(180deg, #F8FAFC 0%, rgba(248, 250, 252, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-faq-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(0deg, #071F18 0%, rgba(7, 31, 24, 0) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-faq-container {
+  position: relative;
+  z-index: 2;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.contact-faq-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(2rem, 3.5vw, 3rem) auto;
+}
+
+.contact-faq-header .section-subtitle {
+  margin: 0.5rem auto 0 auto;
+}
+
+.contact-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-card-item {
+  border-radius: 16px;
+  border: 1.5px solid rgba(22, 163, 74, 0.18);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px -2px rgba(7, 38, 21, 0.05);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-card-item:hover {
+  border-color: rgba(34, 197, 94, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -4px rgba(22, 163, 74, 0.12);
+}
+
+.faq-card-item.is-open {
+  background: #FFFFFF;
+  border-color: #16A34A;
+  box-shadow: 0 14px 34px -4px rgba(22, 163, 74, 0.16);
+}
+
+.faq-toggle-btn {
+  width: 100%;
+  padding: 1.35rem 1.65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.faq-question-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.02rem;
+  color: #0F172A;
+  line-height: 1.4;
+  transition: color 0.25s ease;
+  flex: 1;
+}
+
+.faq-card-item.is-open .faq-question-text {
+  color: #15803D;
+}
+
+.faq-icon-bubble {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(22, 163, 74, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #16A34A;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-card-item.is-open .faq-icon-bubble {
+  background: #16A34A;
+  color: #FFFFFF;
+  border-color: #16A34A;
+  transform: rotate(180deg);
+}
+
+.faq-answer-body {
+  padding: 0 1.65rem 1.35rem 1.65rem;
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  border-top: 1px solid rgba(22, 163, 74, 0.12);
+  padding-top: 1.15rem;
 }
 
 /* ===================================================

@@ -103,7 +103,8 @@ export default function AboutPage({ onOpenQuote }) {
       category: 'TRADE_EXPOS',
       location: 'DUBAI WORLD TRADE CENTRE / DEC',
       desc: 'Representing India’s premier agro-commodity export desk and presenting export-grade spices to global FMCG buyers.',
-      tags: ['50+ Nations Reached', 'APEDA Trade Mission', 'B2B Buyer Desks']
+      tags: ['50+ Nations Reached', 'APEDA Trade Mission', 'B2B Buyer Desks'],
+      objectPosition: 'center 45%'
     },
     {
       id: 2,
@@ -113,7 +114,8 @@ export default function AboutPage({ onOpenQuote }) {
       category: 'FARM_SOURCING',
       location: 'CENTRAL INDIA CHILLI CORRIDORS',
       desc: 'On-ground field inspections ensuring zero pesticide residue, optimum pod maturity, and strict sorting at farm gate.',
-      tags: ['Zero Middlemen', 'Strict Lab Rigor', 'Farm Gate Quality']
+      tags: ['Zero Middlemen', 'Strict Lab Rigor', 'Farm Gate Quality'],
+      objectPosition: 'center 46%'
     },
     {
       id: 3,
@@ -123,7 +125,8 @@ export default function AboutPage({ onOpenQuote }) {
       category: 'TRADE_EXPOS',
       location: 'AGRICULTURAL TECHNOLOGIES CLUSTER',
       desc: 'High-level bilateral trade discussions expanding Eurasian corridors for dehydrated onion, garlic, and whole spices.',
-      tags: ['European Corridors', 'AgTech Standards', 'Contract Sourcing']
+      tags: ['European Corridors', 'AgTech Standards', 'Contract Sourcing'],
+      objectPosition: 'center 48%'
     },
     {
       id: 4,
@@ -133,7 +136,8 @@ export default function AboutPage({ onOpenQuote }) {
       category: 'FARM_SOURCING',
       location: 'REGIONAL GROWER BELTS, MAHARASHTRA',
       desc: 'Partnering with farmer groups for sustainable cultivation and ensuring full traceability from farm to global markets.',
-      tags: []
+      tags: [],
+      objectPosition: 'center 52%'
     },
     {
       id: 5,
@@ -143,7 +147,8 @@ export default function AboutPage({ onOpenQuote }) {
       category: 'TRADE_EXPOS',
       location: 'GULFOOD GLOBAL INNOVATION PAVILIONS',
       desc: 'Showcasing India’s finest spices, value-added products, and new innovations to international buyers.',
-      tags: []
+      tags: [],
+      objectPosition: 'center 22%'
     }
   ];
 
@@ -284,13 +289,9 @@ export default function AboutPage({ onOpenQuote }) {
               <div className="story-photo-card">
                 <img 
                   src="/assets/main.png" 
-                  alt="Field Inspection & Zero-Middlemen Sourcing" 
+                  alt="Pankaj Overseas Exports Farm Sourcing & Quality Inspection" 
                   className="story-main-photo" 
                 />
-                <div className="story-photo-caption">
-                  <h4 className="story-caption-title">Field Inspection & Zero-Middlemen Sourcing</h4>
-                  <p className="story-caption-sub">Direct Grower Partnerships • Strict Quality Rigor • Global Dispatch</p>
-                </div>
               </div>
             </div>
 
@@ -419,7 +420,12 @@ export default function AboutPage({ onOpenQuote }) {
                 onKeyDown={(e) => e.key === 'Enter' && setSelectedGalleryItem(item)}
               >
                 <div className="gallery-image-box">
-                  <img src={item.image} alt={item.title} loading="lazy" />
+                  <img 
+                    src={item.image} 
+                    alt={item.title} 
+                    loading="lazy" 
+                    style={{ objectPosition: item.objectPosition || 'center' }}
+                  />
                   <div className="gallery-image-overlay">
                     <span className="gallery-zoom-hint">
                       <Maximize2 size={13} />
@@ -471,7 +477,16 @@ export default function AboutPage({ onOpenQuote }) {
               </button>
 
               <div className="gallery-modal-image-wrap">
-                <img src={selectedGalleryItem.image} alt={selectedGalleryItem.title} />
+                <div 
+                  className="gallery-modal-bg-blur"
+                  style={{ backgroundImage: `url(${selectedGalleryItem.image})` }}
+                  aria-hidden="true"
+                />
+                <img 
+                  src={selectedGalleryItem.image} 
+                  alt={selectedGalleryItem.title} 
+                  className="gallery-modal-main-img" 
+                />
               </div>
 
               <div className="gallery-modal-content">
