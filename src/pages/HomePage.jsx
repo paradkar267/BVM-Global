@@ -625,7 +625,7 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
         </div>
       </section>
 
-      {/* 8. OUR ADVANTAGE / WHY CHOOSE BVM GLOBAL */}
+      {/* 8. OUR ADVANTAGE / WHY CHOOSE PANKAJ OVERSEAS */}
       <WhyChooseUsSection />
 
       {/* 9. QUICK INQUIRY / GET A QUOTE CTA SECTION (EXECUTIVE BANNER) */}
