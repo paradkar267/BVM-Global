@@ -881,6 +881,10 @@ export default function AboutPage({ onOpenQuote }) {
                 <span className="cert-title-italic"> Compliance</span>
               </h2>
 
+              <p className="cert-hero-sub">
+                Authorized by India's premier export councils, statutory ministry boards, and international trade frameworks.
+              </p>
+
               <div className="cert-hero-image-wrap">
                 <img 
                   src="/assets/c2.png" 
