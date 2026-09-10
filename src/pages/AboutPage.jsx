@@ -275,7 +275,7 @@ export default function AboutPage({ onOpenQuote }) {
             <div className="story-photo-wrapper">
               <div className="story-photo-card">
                 <img 
-                  src="/assets/g3.jpeg" 
+                  src="/assets/main.png" 
                   alt="Field Inspection & Zero-Middlemen Sourcing" 
                   className="story-main-photo" 
                 />
@@ -474,14 +474,16 @@ export default function AboutPage({ onOpenQuote }) {
                 <h3 className="gallery-modal-title">{selectedGalleryItem.title}</h3>
                 <p className="gallery-modal-desc">{selectedGalleryItem.desc}</p>
                 
-                <div className="gallery-modal-tags">
-                  {selectedGalleryItem.tags.map((tag, idx) => (
-                    <span key={idx} className="gallery-modal-tag-pill">
-                      <CheckCircle2 size={13} />
-                      <span>{tag}</span>
-                    </span>
-                  ))}
-                </div>
+                {selectedGalleryItem.tags && selectedGalleryItem.tags.length > 0 && (
+                  <div className="gallery-modal-tags">
+                    {selectedGalleryItem.tags.map((tag, idx) => (
+                      <span key={idx} className="gallery-modal-tag-pill">
+                        <CheckCircle2 size={13} />
+                        <span>{tag}</span>
+                      </span>
+                    ))}
+                  </div>
+                )}
 
                 <div className="gallery-modal-action">
                   <button 

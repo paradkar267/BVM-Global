@@ -8,47 +8,7 @@ export default function TrustedExporterBanner({ onOpenQuote }) {
       <div className="container-wide">
         <div className="agro-spotlight-card">
           
-          {/* Left Column: Visual Imagery with Floating Metric Badges */}
-          <div className="agro-spotlight-image-col">
-            <div className="agro-image-frame">
-              <img 
-                src="/assets/2.png" 
-                alt="Naturally Fresh Indian Agricultural Produce Export" 
-                className="agro-main-photo"
-              />
-              <div className="agro-image-overlay"></div>
-
-              {/* Floating Stat Badge 1: 97% On-time delivery */}
-              <div className="agro-floating-badge badge-top-left">
-                <div className="badge-icon-wrap emerald">
-                  <Clock size={16} />
-                </div>
-                <div className="badge-text-group">
-                  <span className="badge-stat-value">97%</span>
-                  <span className="badge-stat-label">On-time delivery</span>
-                </div>
-              </div>
-
-              {/* Floating Stat Badge 2: 20+ Countries */}
-              <div className="agro-floating-badge badge-bottom-right">
-                <div className="badge-icon-wrap gold">
-                  <Globe size={16} />
-                </div>
-                <div className="badge-text-group">
-                  <span className="badge-stat-value">20+</span>
-                  <span className="badge-stat-label">Countries reached</span>
-                </div>
-              </div>
-
-              {/* Verified Pill */}
-              <div className="agro-verified-tag">
-                <ShieldCheck size={14} className="verified-icon" />
-                <span>APEDA & SPICES BOARD CERTIFIED</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Editorial & Value Proposition */}
+          {/* Left Column: Editorial & Value Proposition */}
           <div className="agro-spotlight-content-col">
             <div className="agro-eyebrow-row">
               <span className="agro-eyebrow-line"></span>
@@ -83,17 +43,61 @@ export default function TrustedExporterBanner({ onOpenQuote }) {
               </div>
             </div>
 
-            {/* Action Buttons Row */}
+            {/* Action Button */}
             <div className="agro-action-buttons">
-              <Link to="/services" className="btn-agro-primary">
-                <Leaf size={16} className="btn-icon" />
-                <span>Explore Products</span>
-                <ArrowRight size={15} className="btn-arrow" />
-              </Link>
-              <Link to="/contact" className="btn-agro-outline">
+              <Link to="/contact" className="btn-agro-primary">
                 <span>Contact Us</span>
                 <ArrowRight size={15} className="btn-arrow" />
               </Link>
+            </div>
+          </div>
+
+          {/* Right Column: Verified Metrics & Trust Dashboard (No Image) */}
+          <div className="agro-spotlight-metrics-col">
+            
+            {/* Top 2 Metric Cards */}
+            <div className="agro-metrics-row">
+              
+              {/* Metric 1: On-Time Delivery */}
+              <div className="agro-metric-box">
+                <div className="agro-metric-header">
+                  <div className="badge-icon-wrap emerald">
+                    <Clock size={18} />
+                  </div>
+                  <span className="agro-metric-badge">VERIFIED</span>
+                </div>
+                <div className="agro-metric-val">97%</div>
+                <div className="agro-metric-lbl">On-Time Delivery</div>
+                <p className="agro-metric-sub">Precision cold-chain & container port dispatches.</p>
+              </div>
+
+              {/* Metric 2: Global Reach */}
+              <div className="agro-metric-box">
+                <div className="agro-metric-header">
+                  <div className="badge-icon-wrap gold">
+                    <Globe size={18} />
+                  </div>
+                  <span className="agro-metric-badge">GLOBAL</span>
+                </div>
+                <div className="agro-metric-val">20+</div>
+                <div className="agro-metric-lbl">Countries Reached</div>
+                <p className="agro-metric-sub">Active multimodal corridors across 4 continents.</p>
+              </div>
+
+            </div>
+
+            {/* Bottom Full-Width Trust Banner */}
+            <div className="agro-trust-banner">
+              <div className="trust-banner-icon-box">
+                <ShieldCheck size={24} className="trust-shield-icon" />
+              </div>
+              <div className="trust-banner-text">
+                <div className="trust-banner-tag">APEDA & SPICES BOARD CERTIFIED</div>
+                <div className="trust-banner-title">Zero-Middlemen Farm Gate Assurance</div>
+                <p className="trust-banner-desc">
+                  Direct grower contracts with strict phytosanitary & lab-grade compliance for global export.
+                </p>
+              </div>
             </div>
 
           </div>

@@ -8,6 +8,7 @@ import {
   MapPin, Handshake, Warehouse
 } from 'lucide-react';
 import { logisticsServices, consultancyPlans } from '../data/services.js';
+import TrustedExporterBanner from '../components/TrustedExporterBanner.jsx';
 
 export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
   const getBadgeIcon = (badge) => {
@@ -199,6 +200,9 @@ export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
 
         </div>
       </section>
+
+      {/* 2.5. TRUSTED GLOBAL AGRO EXPORTER SPOTLIGHT */}
+      <TrustedExporterBanner onOpenQuote={onOpenQuote} />
 
       {/* 3. EXPORT CONSULTANCY & COMPLIANCE PACKAGES */}
       <section className="consultancy-plans-section" id="consultancy-plans">

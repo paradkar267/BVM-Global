@@ -4,252 +4,231 @@ import { Link } from 'react-router-dom';
 export default function WhyChooseUsSection() {
   return (
     <section className="bvm-advantage-section" id="why-us">
-      {/* Background Graphic & Subtle Organic Ambient Overlay */}
+      {/* Background Graphic with why.png (contains corner botanical leaf & wheat artwork) */}
       <div className="bvm-advantage-bg" aria-hidden="true">
         <img 
-          src="/assets/backg.png" 
+          src="/assets/why.png" 
           alt="" 
           className="bvm-advantage-bg-img" 
         />
-        <div className="bvm-advantage-bg-tint"></div>
       </div>
 
-      <div className="container-wide bvm-advantage-layout">
+      <div className="container-wide bvm-advantage-container">
         
         {/* =========================================================================
-            LEFT COLUMN: Intro + Brand Mission + Farm Photo Lower Half
+            1. TOP HEADER ROW (Full width across both columns matching reference)
             ========================================================================= */}
-        <div className="bvm-intro-col">
-          {/* Top Text Content */}
-          <div className="bvm-intro-top-content">
-            {/* Eyebrow */}
+        <div className="bvm-adv-top-header">
+          {/* Top Left Title Block */}
+          <div className="bvm-adv-title-block">
             <div className="bvm-adv-eyebrow">
+              <span className="bvm-adv-eyebrow-dash">—</span>
               <span>OUR ADVANTAGE</span>
             </div>
-
-            {/* Main Title */}
             <h2 className="bvm-adv-heading">
-              Why choose<br />
-              <span className="bvm-brand-highlight">BVM Global</span>
+              <span className="bvm-heading-main">Why choose</span>
+              <span className="bvm-heading-brand">BVM Global</span>
             </h2>
+          </div>
 
-            {/* Subtitle */}
+          {/* Top Vertical Divider Line */}
+          <div className="bvm-adv-header-divider" aria-hidden="true"></div>
+
+          {/* Top Right Subtitle + Tagline + Script Block */}
+          <div className="bvm-adv-header-right">
             <p className="bvm-adv-subtitle">
               A dependable route from Indian farms to global buyers.
             </p>
 
-            {/* Accent Line Tagline */}
-            <div className="bvm-adv-tagline">
-              <span className="bvm-tagline-bar" aria-hidden="true"></span>
-              <span className="bvm-tagline-text">Source. Prepare. Deliver.</span>
-            </div>
-
-            {/* Calligraphic Serif Statement with underline */}
-            <div className="bvm-adv-calligraphy-wrap">
-              <div className="bvm-adv-calligraphy">
-                <span>Good</span>
-                <span>Produce</span>
-                <span>Brighter</span>
-                <span>Tomorrows</span>
+            <div className="bvm-adv-meta-row">
+              <div className="bvm-adv-tagline-pill">
+                <span>Source. Prepare. Deliver.</span>
               </div>
-              <div className="bvm-calligraphy-underline" aria-hidden="true"></div>
-            </div>
-          </div>
 
-          {/* Bottom Half Farm Photo Visual */}
-          <div className="bvm-farm-bottom-visual">
-            <img 
-              src="/assets/farm-field-background.png" 
-              alt="Indian agriculture tea and farm fields" 
-              className="bvm-farm-photo"
-              loading="lazy"
-            />
-            <div className="bvm-farm-top-fade" aria-hidden="true"></div>
-            <div className="bvm-farm-caption">
-              <span className="bvm-caption-line-1">FROM INDIA</span>
-              <div className="bvm-caption-line-2">
-                <span>TO A HEALTHIER WORLD</span>
-                <span className="bvm-caption-rule"></span>
+              <div className="bvm-adv-calligraphy-wrap">
+                <span className="bvm-adv-calligraphy-text">
+                  Good Produce, <em>Brighter Tomorrows.</em>
+                </span>
+                <div className="bvm-calligraphy-underline" aria-hidden="true"></div>
               </div>
             </div>
           </div>
         </div>
 
         {/* =========================================================================
-            RIGHT COLUMN: Bento Grid (Card 01, Stack 02+03, Cards 04+05, Footer Bar)
+            2. MAIN 2-COLUMN SPLIT (Left Statement Card + Right 5 Features Stack)
             ========================================================================= */}
-        <div className="bvm-bento-col">
+        <div className="bvm-advantage-grid-2col">
           
-          {/* CARD 01: Premium Quality (Wide Mint Banner) */}
-          <div className="bvm-bento-card bvm-card-01">
-            <div className="bvm-card-01-content">
-              <div className="bvm-card-num">01 <span className="bvm-num-dash"></span></div>
-              <h3 className="bvm-card-01-title">Premium Quality</h3>
-              <p className="bvm-card-01-desc">
-                Handpicked produce meeting the highest export standards.
-              </p>
-            </div>
+          {/* LEFT: Green Statement Card ("Good Produce, Brighter Tomorrows.") */}
+          <div className="bvm-statement-card">
+            <div className="bvm-statement-card-inner">
+              <h3 className="bvm-statement-heading">
+                <span className="bvm-statement-line">Good</span>
+                <span className="bvm-statement-line">Produce,</span>
+                <span className="bvm-statement-line">Brighter</span>
+                <span className="bvm-statement-line">Tomorrows.</span>
+              </h3>
 
-            {/* Wheat Botanical Illustration & Quality Tag */}
-            <div className="bvm-card-01-visual">
-              <div className="bvm-quality-badge-text">
+              <div className="bvm-statement-divider" aria-hidden="true"></div>
+
+              <div className="bvm-statement-meta">
+                <span className="bvm-statement-origin">FROM INDIA</span>
+                <span className="bvm-statement-tagline">TO A HEALTHIER WORLD</span>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT: 5 Features Clean Stacked List */}
+          <div className="bvm-features-stack">
+            
+            {/* 01. Premium Quality (Highlighted Mint Card) */}
+            <div className="bvm-feature-item bvm-feature-item--highlighted">
+              <div className="bvm-feature-left">
+                <div className="bvm-feature-icon-badge bvm-icon-white">
+                  <img 
+                    src="/assets/wheat-line-art.png" 
+                    alt="Wheat line art" 
+                    className="bvm-feature-wheat-img"
+                  />
+                </div>
+                <div className="bvm-feature-text">
+                  <div className="bvm-feat-num">01 <span className="bvm-feat-dash"></span></div>
+                  <h3 className="bvm-feat-title">Premium Quality</h3>
+                  <p className="bvm-feat-desc">
+                    Handpicked produce meeting the highest export standards.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bvm-feature-right-tag">
                 <span>QUALITY</span>
                 <span>ROOTED</span>
                 <span>GLOBALLY</span>
               </div>
-              <img 
-                src="/assets/wheat-line-art.png" 
-                alt="Botanical wheat stalk illustration" 
-                className="bvm-wheat-img"
-              />
-            </div>
-          </div>
-
-          {/* ROW 2: White Container with Card 02 & Card 03 Stacked */}
-          <div className="bvm-bento-card bvm-card-stack-0203">
-            {/* ITEM 02: Farmer Direct */}
-            <div className="bvm-stack-row">
-              <div className="bvm-badge-icon">
-                <img 
-                  src="/assets/farmer-direct-icon.svg" 
-                  alt="Farmer direct icon" 
-                  className="bvm-svg-icon"
-                />
-              </div>
-              <div className="bvm-stack-text">
-                <div className="bvm-card-num-green">02 <span className="bvm-num-dash"></span></div>
-                <h4 className="bvm-stack-title">Farmer Direct</h4>
-                <p className="bvm-stack-desc">
-                  Sourced directly from local farming communities across India.
-                </p>
-              </div>
             </div>
 
-            {/* Divider Line */}
-            <div className="bvm-stack-divider"></div>
+            <div className="bvm-feat-divider" aria-hidden="true"></div>
 
-            {/* ITEM 03: Fresh & Natural */}
-            <div className="bvm-stack-row">
-              <div className="bvm-badge-icon">
-                <img 
-                  src="/assets/fresh-natural-icon.svg" 
-                  alt="Fresh & natural leaf icon" 
-                  className="bvm-svg-icon"
-                />
-              </div>
-              <div className="bvm-stack-text">
-                <div className="bvm-card-num-green">03 <span className="bvm-num-dash"></span></div>
-                <h4 className="bvm-stack-title">Fresh &amp; Natural</h4>
-                <p className="bvm-stack-desc">
-                  No additives, no compromise — pure farm-to-port produce.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* ROW 3: Side-by-Side Cards (04 & 05) */}
-          <div className="bvm-cards-row-split">
-            {/* CARD 04: Global Delivery (Deep Green Card) */}
-            <div className="bvm-bento-card bvm-card-04">
-              <div className="bvm-card-04-top">
-                <div className="bvm-card-num-light">04 <span className="bvm-num-dash-light"></span></div>
-              </div>
-
-              <div className="bvm-card-04-body">
-                <div className="bvm-ship-icon-box">
-                  <img 
-                    src="/assets/global-delivery-icon.svg" 
-                    alt="Global delivery cargo ship icon" 
-                    className="bvm-ship-icon"
-                  />
+            {/* 02. Farmer Direct */}
+            <div className="bvm-feature-item">
+              <div className="bvm-feature-left">
+                <div className="bvm-feature-icon-badge">
+                  <svg width="28" height="28" viewBox="0 0 96 96" fill="none" stroke="#0D7A47" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M16 66c12-10 27-11 41-2l13 7c4 2 5 7 2 10-3 3-7 3-11 1L42 75"/>
+                    <path d="M15 66l14-14c7-7 17-7 24-1l7 6c3 3 3 7 0 10-3 3-7 3-10 1l-8-6"/>
+                    <path d="M60 42c-2-12 5-22 17-26 2 12-4 23-17 26Z"/>
+                    <path d="M59 41c-6-7-14-8-21-5 4 8 11 11 21 5Z"/>
+                    <path d="M58 43c5-7 12-12 20-15"/>
+                  </svg>
                 </div>
-                <div className="bvm-card-04-text">
-                  <h4 className="bvm-card-04-title">Global Delivery</h4>
-                  <p className="bvm-card-04-desc">
+                <div className="bvm-feature-text">
+                  <div className="bvm-feat-num">02 <span className="bvm-feat-dash"></span></div>
+                  <h3 className="bvm-feat-title">Farmer Direct</h3>
+                  <p className="bvm-feat-desc">
+                    Sourced directly from local farming communities across India.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bvm-feat-divider" aria-hidden="true"></div>
+
+            {/* 03. Fresh & Natural */}
+            <div className="bvm-feature-item">
+              <div className="bvm-feature-left">
+                <div className="bvm-feature-icon-badge">
+                  <svg width="28" height="28" viewBox="0 0 96 96" fill="none" stroke="#0D7A47" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M24 62c9-27 26-37 50-37-2 26-15 45-44 50"/>
+                    <path d="M25 74c10-19 24-31 43-44"/>
+                    <path d="M23 60c-2-11-8-17-18-19 0 13 6 23 18 26"/>
+                  </svg>
+                </div>
+                <div className="bvm-feature-text">
+                  <div className="bvm-feat-num">03 <span className="bvm-feat-dash"></span></div>
+                  <h3 className="bvm-feat-title">Fresh &amp; Natural</h3>
+                  <p className="bvm-feat-desc">
+                    No additives, no compromise — pure farm-to-port produce.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bvm-feat-divider" aria-hidden="true"></div>
+
+            {/* 04. Global Delivery */}
+            <div className="bvm-feature-item">
+              <div className="bvm-feature-left">
+                <div className="bvm-feature-icon-badge">
+                  <svg width="28" height="28" viewBox="0 0 96 96" fill="none" stroke="#0D7A47" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M8 64h80l-6 10H16Z"/>
+                    <path d="M15 64V46h26v18M41 64V34h24v30M65 64V26h16v38"/>
+                    <path d="M25 46V35h11v11M49 34V22h11v12M70 26V15h8v11"/>
+                    <path d="M4 78c6 0 6 4 12 4s6-4 12-4 6 4 12 4 6-4 12-4 6 4 12 4 6-4 12-4 6 4 12 4 6-4 12-4"/>
+                  </svg>
+                </div>
+                <div className="bvm-feature-text">
+                  <div className="bvm-feat-num">04 <span className="bvm-feat-dash"></span></div>
+                  <h3 className="bvm-feat-title">Global Delivery</h3>
+                  <p className="bvm-feat-desc">
                     Reliable logistics to 30+ countries worldwide.
                   </p>
                 </div>
               </div>
 
-              {/* Bottom Tag & Globe Watermark */}
-              <div className="bvm-card-04-footer">
-                <div className="bvm-card-tag-light">
-                  <span>BRIDGING FARMS TO MARKETS</span>
-                  <span className="bvm-footer-dash-light"></span>
-                </div>
+              <div className="bvm-feature-right-tag">
+                <span>BRIDGING FARMS</span>
+                <span>TO MARKETS</span>
               </div>
-
-              {/* Globe Lines Watermark in bottom-right */}
-              <svg 
-                className="bvm-globe-watermark" 
-                viewBox="0 0 160 160" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <circle cx="160" cy="160" r="120" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
-                <ellipse cx="160" cy="160" rx="90" ry="120" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
-                <ellipse cx="160" cy="160" rx="50" ry="120" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
-                <path d="M40 160C40 160 70 80 160 80" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
-                <path d="M70 160C70 160 100 120 160 120" stroke="rgba(255, 255, 255, 0.16)" strokeWidth="1.5" />
-              </svg>
             </div>
 
-            {/* CARD 05: Trusted Standards (White Card) */}
-            <div className="bvm-bento-card bvm-card-05">
-              <div className="bvm-card-05-top">
-                <div className="bvm-card-num-green">05 <span className="bvm-num-dash"></span></div>
-              </div>
+            <div className="bvm-feat-divider" aria-hidden="true"></div>
 
-              <div className="bvm-card-05-body">
-                <div className="bvm-cert-icon-box">
-                  <img 
-                    src="/assets/trusted-standards-icon.svg" 
-                    alt="Trusted standards certificate icon" 
-                    className="bvm-cert-icon"
-                  />
+            {/* 05. Trusted Standards */}
+            <div className="bvm-feature-item">
+              <div className="bvm-feature-left">
+                <div className="bvm-feature-icon-badge">
+                  <svg width="28" height="28" viewBox="0 0 96 96" fill="none" stroke="#0D7A47" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 12h38l14 14v58H22Z"/>
+                    <path d="M60 12v14h14M32 40h28M32 52h28M32 64h16"/>
+                    <circle cx="66" cy="70" r="13" fill="#E8F7EC" stroke="#0D7A47" strokeWidth="3.5"/>
+                    <path d="m60 70 4 4 9-10"/>
+                  </svg>
                 </div>
-                <div className="bvm-card-05-text">
-                  <h4 className="bvm-card-05-title">Trusted Standards</h4>
-                  <p className="bvm-card-05-desc">
+                <div className="bvm-feature-text">
+                  <div className="bvm-feat-num">05 <span className="bvm-feat-dash"></span></div>
+                  <h3 className="bvm-feat-title">Trusted Standards</h3>
+                  <p className="bvm-feat-desc">
                     Full compliance with FSSAI, APEDA, and international norms.
                   </p>
                 </div>
               </div>
 
-              {/* Bottom Tag */}
-              <div className="bvm-card-05-footer">
-                <div className="bvm-card-tag-muted">
-                  <span>CERTIFIED FOR A BRIGHTER TOMORROW</span>
-                  <span className="bvm-footer-dash-muted"></span>
-                </div>
+              <div className="bvm-feature-right-tag">
+                <span>CERTIFIED FOR A</span>
+                <span>BRIGHTER TOMORROW</span>
               </div>
             </div>
+
           </div>
 
-          {/* BOTTOM FOOTER BAR (Serif tagline, Line, Learn More Link, Leaf Decoration) */}
-          <div className="bvm-bento-footer-bar">
-            <span className="bvm-footer-tagline">
-              Built for every shipment that matters.
-            </span>
-            <div className="bvm-footer-line" aria-hidden="true"></div>
-            <Link to="/about" className="bvm-footer-learn-more">
-              <span>Learn more</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </Link>
+        </div>
 
-            {/* Botanical Leaf Corner Graphic */}
-            <img 
-              src="/assets/leaf-corner-decoration.png" 
-              alt="" 
-              className="bvm-footer-leaf-art"
-              aria-hidden="true"
-            />
-          </div>
-
+        {/* =========================================================================
+            3. BOTTOM FOOTER BAR (Full-width spanning underneath both columns)
+            ========================================================================= */}
+        <div className="bvm-bottom-footer-bar">
+          <span className="bvm-footer-tagline">
+            Built for every shipment that matters.
+          </span>
+          <div className="bvm-footer-line" aria-hidden="true"></div>
+          <Link to="/about" className="bvm-footer-learn-more">
+            <span>Learn more</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </Link>
         </div>
 
       </div>

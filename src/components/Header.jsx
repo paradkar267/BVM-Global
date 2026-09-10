@@ -56,13 +56,13 @@ export default function Header({ onOpenQuote }) {
               src="/assets/pankaj_logo_white.png" 
               alt="Pankaj Overseas" 
               style={{
-                height: scrolled ? '72px' : '122px',
+                height: scrolled ? '88px' : '150px',
                 width: 'auto',
                 maxHeight: 'none',
                 objectFit: 'contain',
                 display: 'block',
                 transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                transform: scrolled ? 'translateY(1px)' : 'translateY(14px)',
+                transform: scrolled ? 'translateY(1px)' : 'translateY(16px)',
                 filter: isDarkHero
                   ? 'brightness(0) invert(1) drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.75))'
                   : 'brightness(0) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.20))'
@@ -120,6 +120,7 @@ export default function Header({ onOpenQuote }) {
             <img 
               src="/assets/pankaj_logo_white.png" 
               alt="Pankaj Overseas" 
+              style={{ height: '76px', width: 'auto', objectFit: 'contain' }}
             />
           </Link>
           <button 

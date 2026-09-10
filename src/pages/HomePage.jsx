@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import { transportModes, logisticsServices, whyChooseUsPillars } from '../data/services.js';
 import { ApedaGraphic, MultimodalGraphic, InlandHubGraphic, GlobalDeskGraphic } from '../components/HeroHighlightGraphics.jsx';
-import TrustedExporterBanner from '../components/TrustedExporterBanner.jsx';
 import WhyChooseUsSection from '../components/WhyChooseUsSection.jsx';
 
 export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
@@ -481,10 +480,7 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
         </div>
       </section>
 
-      {/* 5. TRUSTED GLOBAL EXPORTER SPOTLIGHT */}
-      <TrustedExporterBanner onOpenQuote={onOpenQuote} />
-
-      {/* 6. THE PANKAJ APPROACH (EXACT REFERENCE WITH LBG.PNG) */}
+      {/* 5. THE PANKAJ APPROACH (EXACT REFERENCE WITH LBG.PNG) */}
       <section className="pankaj-approach-section" id="approach">
         {/* Left Curved Dark Green Organic Backdrop Shape */}
         <div className="approach-curved-bg"></div>
