@@ -14,9 +14,9 @@ export function useSEO({
   useEffect(() => {
     // 1. Update Title
     if (title) {
-      document.title = title.includes('Pankaj Overseas')
+      document.title = title.includes('Pankaj Overseas Exports')
         ? title
-        : `${title} | Pankaj Overseas - Global Import & Export Solutions`;
+        : `${title} | Pankaj Overseas Exports - Global Import & Export Solutions`;
     }
 
     // Helper to update or create meta tags

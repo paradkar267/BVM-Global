@@ -27,7 +27,7 @@ export default function WhyChooseUsSection() {
             </div>
             <h2 className="bvm-adv-heading">
               <span className="bvm-heading-main">Why choose</span>
-              <span className="bvm-heading-brand">Pankaj Overseas</span>
+              <span className="bvm-heading-brand">Pankaj Overseas Exports</span>
             </h2>
           </div>
 

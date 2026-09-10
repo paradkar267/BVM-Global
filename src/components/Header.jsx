@@ -43,7 +43,7 @@ export default function Header({ onOpenQuote }) {
           <Link 
             to="/" 
             className="header-brand" 
-            aria-label="Pankaj Overseas Home" 
+            aria-label="Pankaj Overseas Exports Home" 
             style={{ 
               position: 'relative', 
               overflow: 'visible', 
@@ -54,15 +54,9 @@ export default function Header({ onOpenQuote }) {
           >
             <img 
               src="/assets/pankaj_logo_white.png" 
-              alt="Pankaj Overseas" 
+              alt="Pankaj Overseas Exports" 
+              className="header-nav-logo-img"
               style={{
-                height: scrolled ? '88px' : '150px',
-                width: 'auto',
-                maxHeight: 'none',
-                objectFit: 'contain',
-                display: 'block',
-                transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                transform: scrolled ? 'translateY(1px)' : 'translateY(16px)',
                 filter: isDarkHero
                   ? 'brightness(0) invert(1) drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.75))'
                   : 'brightness(0) drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.20))'
@@ -119,7 +113,7 @@ export default function Header({ onOpenQuote }) {
           <Link to="/" onClick={() => setDrawerOpen(false)} className="mobile-drawer-logo">
             <img 
               src="/assets/pankaj_logo_white.png" 
-              alt="Pankaj Overseas" 
+              alt="Pankaj Overseas Exports" 
               style={{ height: '76px', width: 'auto', objectFit: 'contain' }}
             />
           </Link>

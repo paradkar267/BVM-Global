@@ -9,9 +9,9 @@ import useSEO from '../hooks/useSEO.js';
 
 export default function AboutPage({ onOpenQuote }) {
   useSEO({
-    title: 'About Us | Pankaj Overseas - Indian Export House & Multimodal Logistics',
-    description: 'Learn about Pankaj Overseas, an APEDA certified export house based in Nagpur, India. Direct farm-to-port integrity, strict quality control, and global trade excellence.',
-    keywords: 'About Pankaj Overseas, Indian Agro Exporter Nagpur, APEDA Certified Exporter, Spices Board India, Global Trade House, Multimodal Logistics Hub Nagpur',
+    title: 'About Us | Pankaj Overseas Exports - Indian Export House & Multimodal Logistics',
+    description: 'Learn about Pankaj Overseas Exports, an APEDA certified export house based in Nagpur, India. Direct farm-to-port integrity, strict quality control, and global trade excellence.',
+    keywords: 'About Pankaj Overseas Exports, Indian Agro Exporter Nagpur, APEDA Certified Exporter, Spices Board India, Global Trade House, Multimodal Logistics Hub Nagpur',
     canonicalUrl: 'https://pankajoverseas.com/about'
   });
 
@@ -297,7 +297,7 @@ export default function AboutPage({ onOpenQuote }) {
             {/* Right: Narrative, Features & Actions */}
             <div className="story-content-col">
               <p className="story-lead-text">
-                Established with a vision to showcase the richness of Indian agriculture to the world, <strong>Pankaj Overseas</strong> has evolved into a premier international export house and multimodal freight logistics facilitator.
+                Established with a vision to showcase the richness of Indian agriculture to the world, <strong>Pankaj Overseas Exports</strong> has evolved into a premier international export house and multimodal freight logistics facilitator.
               </p>
 
               <p className="story-body-text">

@@ -9,9 +9,9 @@ import useSEO from '../hooks/useSEO.js';
 
 export default function ContactPage({ onShowToast }) {
   useSEO({
-    title: 'Contact Us & Global Trade Desk | RFQ Freight Quotes',
-    description: 'Connect with Pankaj Overseas headquarters in Nagpur, India. Request rapid RFQ pricing for agro-exports, container freight booking, and customs trade advisory.',
-    keywords: 'Contact Pankaj Overseas, Export RFQ Quote India, Nagpur Logistics Office, Freight Forwarding Inquiry, Basmati Rice Supplier Contact, Indian Spices Exporter Contact',
+    title: 'Contact Us & Global Trade Desk | Pankaj Overseas Exports',
+    description: 'Connect with Pankaj Overseas Exports headquarters in Nagpur, India. Request rapid RFQ pricing for agro-exports, container freight booking, and customs trade advisory.',
+    keywords: 'Contact Pankaj Overseas Exports, Export RFQ Quote India, Nagpur Logistics Office, Freight Forwarding Inquiry, Basmati Rice Supplier Contact, Indian Spices Exporter Contact',
     canonicalUrl: 'https://pankajoverseas.com/contact'
   });
 
@@ -42,7 +42,7 @@ export default function ContactPage({ onShowToast }) {
     
     // Format structured WhatsApp trade inquiry message
     const whatsappNumber = '919876543210';
-    const messageText = `*NEW CONTACT / RFQ INQUIRY | PANKAJ OVERSEAS*
+    const messageText = `*NEW CONTACT / RFQ INQUIRY | PANKAJ OVERSEAS EXPORTS*
 ━━━━━━━━━━━━━━━━━━━━
 👤 *Name:* ${formData.name}
 🏢 *Company:* ${formData.company}
@@ -56,7 +56,7 @@ export default function ContactPage({ onShowToast }) {
 📦 *Volume:* ${formData.volume || 'Standard Consignment'}
 📝 *Notes:* ${formData.notes || 'N/A'}
 ━━━━━━━━━━━━━━━━━━━━
-_Sent via Pankaj Overseas Contact Portal_`;
+_Sent via Pankaj Overseas Exports Contact Portal_`;
 
     const encodedMessage = encodeURIComponent(messageText);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

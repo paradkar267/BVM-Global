@@ -368,6 +368,42 @@ textarea {
   text-decoration: none;
 }
 
+.header-nav-logo-img {
+  height: 140px;
+  width: auto;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(14px);
+}
+
+.site-header.scrolled .header-nav-logo-img {
+  height: 84px;
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .header-nav-logo-img {
+    height: 72px !important;
+    transform: translateY(2px) !important;
+  }
+  .site-header.scrolled .header-nav-logo-img {
+    height: 56px !important;
+    transform: translateY(0) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav-logo-img {
+    height: 60px !important;
+    transform: translateY(2px) !important;
+  }
+  .site-header.scrolled .header-nav-logo-img {
+    height: 48px !important;
+  }
+}
+
 .brand-text {
   display: flex;
   flex-direction: column;
@@ -767,9 +803,9 @@ textarea {
 @media (max-width: 768px) {
   .hero-gradient-overlay-exact {
     background: linear-gradient(180deg,
-        rgba(8, 28, 21, 0.65) 0%,
-        rgba(8, 28, 21, 0.45) 40%,
-        rgba(8, 28, 21, 0.8) 100%);
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.25) 40%,
+        rgba(0, 0, 0, 0.65) 100%);
   }
 
   .hero-content-container {
@@ -11258,5 +11294,153 @@ textarea {
 
   .bvm-footer-line {
     display: none;
+  }
+}
+
+/* ===================================================
+   COMPREHENSIVE MOBILE OPTIMIZATIONS (PHONES & SMALL SCREENS)
+   =================================================== */
+@media (max-width: 640px) {
+  /* Prevent any horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container-wide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Hero Section Mobile Polish */
+  .hero-content-container {
+    padding-top: clamp(80px, 14vh, 105px);
+    padding-bottom: 2.25rem;
+  }
+
+  .hero-title-exact {
+    font-size: clamp(1.85rem, 7.2vw, 2.35rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-description-exact {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.35rem;
+  }
+
+  .hero-cta-group-exact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-cta-group-exact .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  /* Multimodal Transport Cards on Mobile */
+  .modes-cards-grid-exact {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .mode-card-item-exact {
+    padding: 1.1rem 1rem 1.35rem 1rem;
+    border-radius: 18px;
+  }
+
+  .mode-card-art-frame {
+    height: 170px;
+    border-radius: 14px;
+    margin-bottom: 0.85rem;
+  }
+
+  .mode-card-title-text {
+    font-size: 1.12rem;
+  }
+
+  .mode-card-desc-text {
+    font-size: 0.82rem;
+  }
+
+  /* Why Choose Us Section Statement Card & Features */
+  .bvm-statement-card {
+    min-height: 220px;
+    padding: 1.75rem 1.35rem;
+    border-radius: 20px;
+  }
+
+  .bvm-statement-heading {
+    font-size: clamp(1.75rem, 6.5vw, 2.25rem);
+  }
+
+  .bvm-feature-item {
+    padding: 0.85rem 0.5rem;
+  }
+
+  .bvm-feature-left {
+    gap: 0.85rem;
+  }
+
+  .bvm-feature-icon-badge {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .bvm-feat-title {
+    font-size: 1.05rem;
+  }
+
+  .bvm-feat-desc {
+    font-size: 0.82rem;
+  }
+
+  /* Modals Optimization */
+  .modal-window {
+    padding: 1.35rem 1.15rem 1.25rem 1.15rem;
+    border-radius: 16px;
+    max-height: 92vh;
+  }
+
+  .modal-close-btn {
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Footer Touch Targets & Mobile Stacking */
+  .footer-social-links {
+    gap: 0.65rem;
+  }
+
+  .footer-social-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-top: 1rem;
+  }
+
+  .footer-legal-links {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .footer-back-to-top-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
   }
 }

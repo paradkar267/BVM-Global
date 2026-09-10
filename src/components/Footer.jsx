@@ -179,7 +179,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            © {new Date().getFullYear()} <strong>Pankaj Overseas</strong>. All rights reserved.
+            © {new Date().getFullYear()} <strong>Pankaj Overseas Exports</strong>. All rights reserved.
           </div>
 
           <div className="footer-legal-links">

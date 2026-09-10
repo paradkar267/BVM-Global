@@ -27,7 +27,7 @@ export default function QuickQuoteModal({ isOpen, initialCommodity, prefillProdu
     
     // Format structured WhatsApp trade inquiry message
     const whatsappNumber = '919876543210';
-    const messageText = `*NEW TRADE INQUIRY | PANKAJ OVERSEAS*
+    const messageText = `*NEW TRADE INQUIRY | PANKAJ OVERSEAS EXPORTS*
 ━━━━━━━━━━━━━━━━━━━━
 👤 *Name:* ${formData.name}
 🏢 *Company:* ${formData.company}
@@ -37,7 +37,7 @@ export default function QuickQuoteModal({ isOpen, initialCommodity, prefillProdu
 ⚓ *Destination Port:* ${formData.destination}
 📦 *Message / Volume:* ${formData.message || 'N/A'}
 ━━━━━━━━━━━━━━━━━━━━
-_Sent via Pankaj Overseas Online RFQ Desk_`;
+_Sent via Pankaj Overseas Exports Online RFQ Desk_`;
 
     const encodedMessage = encodeURIComponent(messageText);
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
