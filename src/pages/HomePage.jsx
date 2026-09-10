@@ -61,11 +61,21 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
       {/* 1. HERO SECTION WITH EXACT TEMPLATE LAYOUT */}
       <section className="hero-section hero-template-exact" id="home">
         <div className="hero-bg-container">
-          <img 
-            src="/assets/bg.png" 
-            alt="Pankaj Overseas Multimodal Global Logistics Network" 
-            className="hero-bg-image-exact"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/assets/bg.png"
+            className="hero-bg-video-exact"
+          >
+            <source src="/assets/vbg.mp4" type="video/mp4" />
+            <img 
+              src="/assets/bg.png" 
+              alt="Pankaj Overseas Multimodal Global Logistics Network" 
+              className="hero-bg-image-exact"
+            />
+          </video>
           <div className="hero-gradient-overlay-exact"></div>
         </div>
 
