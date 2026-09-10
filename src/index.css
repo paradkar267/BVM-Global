@@ -10463,6 +10463,30 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Background Texture Layer */
+.bvm-advantage-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bvm-advantage-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.18;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+.bvm-advantage-bg-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(244, 248, 245, 0.88) 0%, rgba(244, 248, 245, 0.96) 100%);
+}
+
 .bvm-advantage-layout {
   display: grid;
   grid-template-columns: 360px 1fr;

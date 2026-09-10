@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 export default function WhyChooseUsSection() {
   return (
     <section className="bvm-advantage-section" id="why-us">
+      {/* Background Graphic & Subtle Organic Ambient Overlay */}
+      <div className="bvm-advantage-bg" aria-hidden="true">
+        <img 
+          src="/assets/backg.png" 
+          alt="" 
+          className="bvm-advantage-bg-img" 
+        />
+        <div className="bvm-advantage-bg-tint"></div>
+      </div>
+
       <div className="container-wide bvm-advantage-layout">
         
         {/* =========================================================================
