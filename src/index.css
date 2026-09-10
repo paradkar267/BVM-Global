@@ -10504,7 +10504,8 @@ textarea {
 .bvm-intro-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0;
   height: 100%;
 }
 
@@ -10520,7 +10521,7 @@ textarea {
   color: #15803D;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  margin-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 
 .bvm-adv-heading {
@@ -10530,7 +10531,7 @@ textarea {
   color: #072615;
   line-height: 1.05;
   letter-spacing: -0.03em;
-  margin: 0 0 1.15rem 0;
+  margin: 0 0 1rem 0;
 }
 
 .bvm-brand-highlight {
@@ -10539,10 +10540,10 @@ textarea {
 }
 
 .bvm-adv-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   color: #4A6355;
   line-height: 1.5;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.25rem 0;
   max-width: 320px;
   font-weight: 450;
 }
@@ -10551,12 +10552,12 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.35rem;
 }
 
 .bvm-tagline-bar {
   width: 2.5px;
-  height: 28px;
+  height: 26px;
   background: #16A34A;
   border-radius: 2px;
   display: inline-block;
@@ -10564,7 +10565,7 @@ textarea {
 
 .bvm-tagline-text {
   font-family: var(--font-body, 'Plus Jakarta Sans', sans-serif);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 800;
   color: #15803D;
   letter-spacing: 0.04em;
@@ -10574,7 +10575,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.15rem;
 }
 
 .bvm-adv-calligraphy {
@@ -10582,8 +10583,8 @@ textarea {
   flex-direction: column;
   font-family: 'Playfair Display', Georgia, serif;
   font-style: italic;
-  font-size: 1.65rem;
-  line-height: 1.22;
+  font-size: 1.6rem;
+  line-height: 1.2;
   color: #7A8F82;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -10593,22 +10594,31 @@ textarea {
   width: 44px;
   height: 1.5px;
   background: #9BB0A3;
-  margin-top: 0.75rem;
+  margin-top: 0.65rem;
   border-radius: 1px;
 }
 
-/* Farm Bottom Visual (Seamless Natural Transition - NO BOX / NO BORDER) */
+/* Farm Bottom Visual (Seamless Natural Transition - Positioned Higher) */
 .bvm-farm-bottom-visual {
   position: relative;
   overflow: hidden;
-  height: 400px;
-  margin-top: 0.5rem;
+  height: 380px;
+  margin-top: 0.35rem;
   border: none !important;
   box-shadow: none !important;
   background: transparent;
-  border-radius: 0 0 20px 20px;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 28%, black 45%, black 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 12%, rgba(0, 0, 0, 0.8) 28%, black 45%, black 100%);
+  border-radius: 20px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 10%, black 28%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 10%, black 28%, black 100%);
+}
+
+.bvm-farm-bottom-visual::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(7, 38, 21, 0.72) 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .bvm-farm-photo {
@@ -10630,9 +10640,9 @@ textarea {
 
 .bvm-farm-caption {
   position: absolute;
-  bottom: 1.25rem;
-  left: 0.25rem;
-  right: 0.25rem;
+  bottom: 1.35rem;
+  left: 1.25rem;
+  right: 1.25rem;
   color: #FFFFFF;
   z-index: 3;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
