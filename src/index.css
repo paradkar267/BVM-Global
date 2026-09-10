@@ -10102,36 +10102,22 @@ textarea {
    ========================================================================== */
 .consultancy-plans-section {
   position: relative;
-  background-color: #F8FAF9;
+  background-color: #FBFDFC;
   background-image: url('/assets/plan.png');
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-position: right top;
+  background-size: 100% auto;
   padding: clamp(5rem, 7vw, 7rem) 0 clamp(4.5rem, 6.5vw, 6rem) 0;
   color: #0F172A;
   overflow: hidden;
+  border-top: 1px solid #E6ECE8;
+  border-bottom: 1px solid #E6ECE8;
 }
 
-/* Smooth top fade into previous section */
-.consultancy-plans-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 90px;
-  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Smooth bottom fade into next section */
+/* Prevent gradient overlays from wiping out the top globe or bottom artwork */
+.consultancy-plans-section::before,
 .consultancy-plans-section::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 90px;
-  background: linear-gradient(0deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-  z-index: 1;
-  pointer-events: none;
+  display: none;
 }
 
 .consultancy-section-header {
@@ -10460,7 +10446,8 @@ textarea {
 @media (max-width: 1024px) {
   .consultancy-plans-section {
     padding: clamp(4rem, 6vw, 5.5rem) 0;
-    background-position: center top;
+    background-size: 100% auto;
+    background-position: right top;
   }
 
   .consultancy-exact-grid {
@@ -10475,8 +10462,9 @@ textarea {
 @media (max-width: 640px) {
   .consultancy-plans-section {
     padding: clamp(3.5rem, 6vw, 4.5rem) 0;
-    background-size: cover;
+    background-size: auto 340px;
     background-position: right top;
+    background-repeat: no-repeat;
   }
 
   .consultancy-main-heading {
