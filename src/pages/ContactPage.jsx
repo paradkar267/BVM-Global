@@ -5,8 +5,16 @@ import {
   HelpCircle, MessageSquare, Globe, ShieldCheck, 
   ChevronDown, ChevronUp, ArrowRight, FileCheck, Ship
 } from 'lucide-react';
+import useSEO from '../hooks/useSEO.js';
 
 export default function ContactPage({ onShowToast }) {
+  useSEO({
+    title: 'Contact Us & Global Trade Desk | RFQ Freight Quotes',
+    description: 'Connect with Pankaj Overseas headquarters in Nagpur, India. Request rapid RFQ pricing for agro-exports, container freight booking, and customs trade advisory.',
+    keywords: 'Contact Pankaj Overseas, Export RFQ Quote India, Nagpur Logistics Office, Freight Forwarding Inquiry, Basmati Rice Supplier Contact, Indian Spices Exporter Contact',
+    canonicalUrl: 'https://pankajoverseas.com/contact'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',

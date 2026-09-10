@@ -9,8 +9,16 @@ import {
 } from 'lucide-react';
 import { logisticsServices, consultancyPlans } from '../data/services.js';
 import TrustedExporterBanner from '../components/TrustedExporterBanner.jsx';
+import useSEO from '../hooks/useSEO.js';
 
 export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
+  useSEO({
+    title: 'Services & Export Offerings | Agro Procurement & Multimodal Freight',
+    description: 'Explore Pankaj Overseas services: Basmati rice export, Indian spices trading, fresh produce cold-chain, global product sourcing, customs clearance, and multimodal freight corridors.',
+    keywords: 'Agro Export Services, Basmati Rice Sourcing, Indian Spices Export, Multimodal Freight Logistics, Ocean Freight Forwarder India, Air Cargo Logistics, Export Consultancy India',
+    canonicalUrl: 'https://pankajoverseas.com/services'
+  });
+
   const getBadgeIcon = (badge) => {
     switch (badge) {
       case 'PROCUREMENT': return <ShoppingBag style={{ width: 15, height: 15 }} />;

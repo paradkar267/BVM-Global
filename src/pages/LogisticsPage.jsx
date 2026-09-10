@@ -6,8 +6,16 @@ import {
   CheckCircle2, Box, Sparkles
 } from 'lucide-react';
 import { transportModes, containerSpecs } from '../data/services.js';
+import useSEO from '../hooks/useSEO.js';
 
 export default function LogisticsPage({ onOpenQuote }) {
+  useSEO({
+    title: 'Multimodal Freight Logistics | Sea, Air, Road & Rail Corridors',
+    description: 'Explore Pankaj Overseas integrated multimodal logistics network. Ocean freight from JNPT/Mundra, air cargo cool-chain, and express inland rail freight corridors.',
+    keywords: 'Multimodal Logistics India, Sea Freight Nagpur, JNPT Freight, Air Cargo Exports, Container Logistics India, Freight Forwarder Maharashtra',
+    canonicalUrl: 'https://pankajoverseas.com/logistics'
+  });
+
   const [activeMode, setActiveMode] = useState('sea');
 
   const selectedMode = transportModes.find(m => m.id === activeMode) || transportModes[0];

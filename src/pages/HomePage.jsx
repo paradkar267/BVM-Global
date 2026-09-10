@@ -10,8 +10,16 @@ import {
 import { transportModes, logisticsServices, whyChooseUsPillars } from '../data/services.js';
 import { ApedaGraphic, MultimodalGraphic, InlandHubGraphic, GlobalDeskGraphic } from '../components/HeroHighlightGraphics.jsx';
 import WhyChooseUsSection from '../components/WhyChooseUsSection.jsx';
+import useSEO from '../hooks/useSEO.js';
 
 export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
+  useSEO({
+    title: 'Pankaj Overseas | Global Import & Export Solutions | Multimodal Logistics India',
+    description: 'Premier international trade & multimodal logistics enterprise based in Nagpur, India. APEDA certified Basmati rice, Indian spices, fresh produce, and global freight solutions.',
+    keywords: 'Pankaj Overseas, Indian Agro Exporter, Basmati Rice Export, Indian Spices, Multimodal Freight, Sea Freight, Air Cargo, Rail Freight India, Nagpur Logistics',
+    canonicalUrl: 'https://pankajoverseas.com/'
+  });
+
   const dynamicWords = [
     'Global Trade.',
     'World Markets.',

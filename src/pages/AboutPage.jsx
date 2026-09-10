@@ -5,8 +5,16 @@ import {
   CheckCircle2, ArrowRight, Anchor, Factory, Users, HeartHandshake,
   TrendingUp, Sparkles, Truck, Check, Camera, X, Maximize2, Ship, Leaf
 } from 'lucide-react';
+import useSEO from '../hooks/useSEO.js';
 
 export default function AboutPage({ onOpenQuote }) {
+  useSEO({
+    title: 'About Us | Pankaj Overseas - Indian Export House & Multimodal Logistics',
+    description: 'Learn about Pankaj Overseas, an APEDA certified export house based in Nagpur, India. Direct farm-to-port integrity, strict quality control, and global trade excellence.',
+    keywords: 'About Pankaj Overseas, Indian Agro Exporter Nagpur, APEDA Certified Exporter, Spices Board India, Global Trade House, Multimodal Logistics Hub Nagpur',
+    canonicalUrl: 'https://pankajoverseas.com/about'
+  });
+
   const [selectedGalleryItem, setSelectedGalleryItem] = useState(null);
   const [activeGalleryFilter, setActiveGalleryFilter] = useState('ALL');
 

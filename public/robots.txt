@@ -1,0 +1,10 @@
+# Robots.txt for Pankaj Overseas Exports & Multimodal Logistics
+User-agent: *
+Allow: /
+
+# Disallow private or non-essential assets if any
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: https://pankajoverseas.com/sitemap.xml
