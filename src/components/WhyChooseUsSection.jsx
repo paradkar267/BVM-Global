@@ -32,12 +32,15 @@ export default function WhyChooseUsSection() {
             <span className="bvm-tagline-text">Source. Prepare. Deliver.</span>
           </div>
 
-          {/* Calligraphic Serif Statement */}
-          <div className="bvm-adv-calligraphy">
-            <span>Good</span>
-            <span>Produce</span>
-            <span>Brighter</span>
-            <span>Tomorrows</span>
+          {/* Calligraphic Serif Statement with underline */}
+          <div className="bvm-adv-calligraphy-wrap">
+            <div className="bvm-adv-calligraphy">
+              <span>Good</span>
+              <span>Produce</span>
+              <span>Brighter</span>
+              <span>Tomorrows</span>
+            </div>
+            <div className="bvm-calligraphy-underline" aria-hidden="true"></div>
           </div>
 
           {/* Bottom Farm Photo Card */}
@@ -53,7 +56,7 @@ export default function WhyChooseUsSection() {
               <span className="bvm-caption-line-1">FROM INDIA</span>
               <div className="bvm-caption-line-2">
                 <span>TO A HEALTHIER WORLD</span>
-                <span className="bvm-caption-dash"></span>
+                <span className="bvm-caption-rule"></span>
               </div>
             </div>
           </div>
