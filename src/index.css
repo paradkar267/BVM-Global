@@ -8704,7 +8704,6 @@ textarea {
   width: 100%;
   height: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
   transition: transform 0.35s ease;
 }
 
@@ -8779,7 +8778,6 @@ textarea {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  mix-blend-mode: multiply;
   transition: transform 0.3s ease;
 }
 
