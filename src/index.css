@@ -10504,8 +10504,7 @@ textarea {
 .bvm-intro-col {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 0;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -10598,12 +10597,13 @@ textarea {
   border-radius: 1px;
 }
 
-/* Farm Bottom Visual (Seamless Natural Transition - Positioned Higher) */
+/* Farm Bottom Visual (Aligned to exact level of Card 04 & Card 05) */
 .bvm-farm-bottom-visual {
   position: relative;
   overflow: hidden;
-  height: 380px;
-  margin-top: 0.35rem;
+  height: 205px;
+  min-height: 195px;
+  margin-top: 1rem;
   border: none !important;
   box-shadow: none !important;
   background: transparent;
@@ -10616,7 +10616,7 @@ textarea {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(7, 38, 21, 0.72) 100%);
+  background: linear-gradient(180deg, transparent 50%, rgba(7, 38, 21, 0.75) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -10640,9 +10640,9 @@ textarea {
 
 .bvm-farm-caption {
   position: absolute;
-  bottom: 1.35rem;
-  left: 1.25rem;
-  right: 1.25rem;
+  bottom: 1.25rem;
+  left: 1.15rem;
+  right: 1.15rem;
   color: #FFFFFF;
   z-index: 3;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
