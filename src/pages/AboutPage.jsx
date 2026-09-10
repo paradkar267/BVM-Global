@@ -863,315 +863,94 @@ export default function AboutPage({ onOpenQuote }) {
       </section>
 
 
-      {/* LIGHTBOX MODAL */}
-      {selectedGalleryItem && (
-        <div className="gallery-modal-backdrop" onClick={() => setSelectedGalleryItem(null)}>
-          <div className="gallery-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="gallery-modal-close" onClick={() => setSelectedGalleryItem(null)}>
-              <X size={20} />
-            </button>
-            <img src={selectedGalleryItem.image} alt={selectedGalleryItem.title} className="gallery-modal-img" />
-            <div className="gallery-modal-footer">
-              <div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: '#4ADE80', fontWeight: 700 }}>
-                  {selectedGalleryItem.badge}
-                </span>
-                <h3 style={{ fontSize: '1.2rem', color: '#FFFFFF', fontWeight: 800, marginTop: '0.2rem' }}>
-                  {selectedGalleryItem.title}
-                </h3>
-                <p style={{ fontSize: '0.85rem', color: '#94A3B8', marginTop: '0.3rem' }}>
-                  {selectedGalleryItem.desc}
-                </p>
-              </div>
-              <button className="btn btn-primary btn-sm" onClick={() => { setSelectedGalleryItem(null); onOpenQuote(); }}>
-                <span>Inquire About Operations</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* 7. ACCREDITATIONS & STATUTORY TRADE COMPLIANCE (EXECUTIVE GRAPHIC SEALS WITH ABOUT.PNG) */}
+      {/* 7. CERTIFICATIONS & COMPLIANCE (EXACT REFERENCE DESIGN WITH C1-C5) */}
       <section className="about-compliance-section" id="compliance">
-        {/* Floating Decorative Typography & Stamps */}
-        <div className="compliance-deco-left">
-          <span>INDIAN</span>
-          <span>AGRO EXPORT</span>
-          <span>COMPLIANCE</span>
-          <div className="compliance-deco-dash"></div>
-          <span className="compliance-deco-sub">SAFE FOOD</span>
-          <span className="compliance-deco-sub">GLOBAL MARKETS</span>
-          <span className="compliance-deco-sub">STRONGER INDIA</span>
-          <div className="compliance-deco-dash"></div>
-        </div>
-
-        <div className="compliance-stamp-badge">
-          <div className="compliance-stamp-circle">
-            <svg viewBox="0 0 120 120" className="stamp-svg">
-              <path id="stamp-curve" d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0" fill="none" />
-              <text className="stamp-text">
-                <textPath href="#stamp-curve" startOffset="0%">
-                  COMPLIANCE TODAY • A HEALTHIER TOMORROW •
-                </textPath>
-              </text>
-            </svg>
-            <div className="stamp-center-icon">
-              <ShieldCheck size={24} />
-            </div>
-          </div>
-        </div>
-
-        <div className="compliance-deco-farms">
-          <span>FROM</span>
-          <span>INDIAN FARMS</span>
-          <span>TO A BRIGHTER</span>
-          <span>WORLD</span>
-        </div>
-
-        <div className="compliance-deco-trusted">
-          <span>TRUSTED</span>
-          <span>REGULATED</span>
-          <span>GLOBAL</span>
-        </div>
-
-        <div className="compliance-deco-bottom">
-          <span>COMPLIANCE.</span>
-          <span>FUELS.</span>
-          <span>OPPORTUNITY</span>
-          <div className="compliance-deco-dash"></div>
-        </div>
-
-        <div className="container-wide compliance-inner-container">
+        <div className="container-wide cert-compliance-container">
           
-          {/* Header */}
-          <div className="compliance-header">
-            <div className="compliance-eyebrow-badge">
-              <ShieldCheck className="compliance-eyebrow-icon" />
-              <span>STATUTORY ACCREDITATIONS & COMPLIANCE</span>
-            </div>
-            <h2 className="compliance-main-title">
-              Certified & Recognized by<br />
-              <span className="compliance-title-highlight">Statutory Authorities</span>
-            </h2>
-            <p className="compliance-subtitle">
-              Fully compliant with Indian statutory export regulations, bilateral trade treaties, and international food safety frameworks.
-            </p>
-          </div>
+          <div className="cert-split-layout">
+            
+            {/* Left Column: Heading + c2.png Hero Visual */}
+            <div className="cert-left-hero">
+              <div className="cert-eyebrow">
+                <span className="cert-eyebrow-dash">—</span>
+                <span>TRUST & COMPLIANCE</span>
+              </div>
 
-          {/* Schematic Overlay Lines & Junction Nodes */}
-          <div className="compliance-grid-wrapper">
+              <h2 className="cert-main-title">
+                <span>Certifications &</span>
+                <span className="cert-title-italic"> Compliance</span>
+              </h2>
 
-            {/* Circuit Line Grid Overlay */}
-            <div className="compliance-circuit-overlay">
-              <div className="circuit-node node-top-1"><Check size={10} /></div>
-              <div className="circuit-node node-top-2"><Check size={10} /></div>
-              <div className="circuit-node node-top-3"><Check size={10} /></div>
-              <div className="circuit-node node-mid-1"><Check size={10} /></div>
-              <div className="circuit-node node-mid-2"><Check size={10} /></div>
-              <div className="circuit-node node-mid-3"><Check size={10} /></div>
-              <div className="circuit-node node-bot-1"><Check size={10} /></div>
-              <div className="circuit-node node-bot-2"><Check size={10} /></div>
-              <div className="circuit-node node-bot-3"><Check size={10} /></div>
+              <div className="cert-hero-image-wrap">
+                <img 
+                  src="/assets/c2.png" 
+                  alt="Compliance Certificates & Regulatory Documents" 
+                  className="cert-hero-img" 
+                />
+              </div>
             </div>
 
-            {/* 6 Compliance Cards */}
-            <div className="compliance-cards-grid">
-              
-              {/* 1. APEDA */}
-              <div className="compliance-card-exact apeda-featured">
-                <div className="card-top-ribbon">
-                  <span>★</span>
-                </div>
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box emerald">
-                    <ShieldCheck size={22} />
-                  </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>Statutory Exporter Active</span>
-                  </div>
-                </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge emerald">APEDA</span>
-                  <span className="compliance-auth-text">MINISTRY OF COMMERCE & INDUSTRY</span>
-                </div>
-                <h3 className="compliance-title">
-                  Agricultural & Processed Food Products Export Development Authority
-                </h3>
-                <p className="compliance-desc">
-                  Govt. of India registered agro export house with guaranteed origin traceability.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>APEDA / RCMC REG: EVP-2004</span>
-                  </div>
-                  <div className="compliance-watermark-icon">
-                    <ShieldCheck size={48} />
-                  </div>
-                </div>
-              </div>
+            {/* Right Column: 2x2 Grid of Statutory Certifications (c1, c3, c4, c5) */}
+            <div className="cert-right-grid-wrap">
+              <div className="cert-2x2-grid">
 
-              {/* 2. SPICES BOARD */}
-              <div className="compliance-card-exact spices-board">
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box amber">
-                    <Sparkles size={22} />
+                {/* 1. DGFT Registered */}
+                <div className="cert-card-box cell-top-left">
+                  <div className="cert-card-header">
+                    <div className="cert-card-img-wrap">
+                      <img src="/assets/c1.png" alt="DGFT Registered" className="cert-card-img" />
+                    </div>
+                    <span className="cert-badge-pill">CERTIFIED</span>
                   </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>Quality Assayed License</span>
-                  </div>
+                  <h3 className="cert-card-name">DGFT Registered</h3>
+                  <p className="cert-card-text">
+                    Directorate General of Foreign Trade authorized exporter
+                  </p>
                 </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge amber">SPICES BOARD</span>
-                  <span className="compliance-auth-text">GOVT. OF INDIA STATUTORY BODY</span>
-                </div>
-                <h3 className="compliance-title">
-                  Spices Board of India (Ministry of Commerce)
-                </h3>
-                <p className="compliance-desc">
-                  Certified export quality compliance with batch testing for all whole and ground spices.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>CRIS / SPICES-CERT #0042</span>
-                  </div>
-                  <div className="compliance-watermark-icon amber">
-                    <Sparkles size={48} />
-                  </div>
-                </div>
-              </div>
 
-              {/* 3. FSSAI */}
-              <div className="compliance-card-exact fssai">
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box green">
-                    <ShieldCheck size={22} />
+                {/* 2. MSME Certified */}
+                <div className="cert-card-box cell-top-right">
+                  <div className="cert-card-header">
+                    <div className="cert-card-img-wrap">
+                      <img src="/assets/c3.png" alt="MSME Certified" className="cert-card-img" />
+                    </div>
+                    <span className="cert-badge-pill">CERTIFIED</span>
                   </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>Central License Verified</span>
-                  </div>
+                  <h3 className="cert-card-name">MSME Certified</h3>
+                  <p className="cert-card-text">
+                    Ministry of MSME recognized enterprise
+                  </p>
                 </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge green">FSSAI</span>
-                  <span className="compliance-auth-text">FOOD SAFETY REGULATOR</span>
-                </div>
-                <h3 className="compliance-title">
-                  Food Safety and Standards Authority of India
-                </h3>
-                <p className="compliance-desc">
-                  Central Regulatory License for commercial export, hygienic handling & global logistics.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>CENTRAL LIC #1000904400198</span>
-                  </div>
-                  <div className="compliance-watermark-icon green">
-                    <ShieldCheck size={48} />
-                  </div>
-                </div>
-              </div>
 
-              {/* 4. ISO 22000:2018 */}
-              <div className="compliance-card-exact iso">
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box blue">
-                    <Award size={22} />
+                {/* 3. APEDA Approved */}
+                <div className="cert-card-box cell-bottom-left">
+                  <div className="cert-card-header">
+                    <div className="cert-card-img-wrap">
+                      <img src="/assets/c4.png" alt="APEDA Approved" className="cert-card-img" />
+                    </div>
+                    <span className="cert-badge-pill">CERTIFIED</span>
                   </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>International Quality Rigor</span>
-                  </div>
+                  <h3 className="cert-card-name">APEDA Approved</h3>
+                  <p className="cert-card-text">
+                    Agricultural & Processed Food Products Export authority
+                  </p>
                 </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge blue">ISO 22000:2018</span>
-                  <span className="compliance-auth-text">GLOBAL FSMS STANDARD</span>
-                </div>
-                <h3 className="compliance-title">
-                  Food Safety Management Systems Standard
-                </h3>
-                <p className="compliance-desc">
-                  Internationally certified food safety rigor from farm packaging to multimodal sea containers.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>ISO / FSMS / HACCP ACCREDITED</span>
-                  </div>
-                  <div className="compliance-watermark-icon blue">
-                    <Award size={48} />
-                  </div>
-                </div>
-              </div>
 
-              {/* 5. DGFT / IEC */}
-              <div className="compliance-card-exact dgft">
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box teal">
-                    <Anchor size={22} />
+                {/* 4. Global Standards */}
+                <div className="cert-card-box cell-bottom-right">
+                  <div className="cert-card-header">
+                    <div className="cert-card-img-wrap">
+                      <img src="/assets/c5.png" alt="Global Standards" className="cert-card-img" />
+                    </div>
+                    <span className="cert-badge-pill">CERTIFIED</span>
                   </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>Customs Clearance Active</span>
-                  </div>
+                  <h3 className="cert-card-name">Global Standards</h3>
+                  <p className="cert-card-text">
+                    Compliant with international food safety regulations
+                  </p>
                 </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge teal">DGFT / IEC</span>
-                  <span className="compliance-auth-text">MINISTRY OF COMMERCE & INDUSTRY</span>
-                </div>
-                <h3 className="compliance-title">
-                  Directorate General of Foreign Trade
-                </h3>
-                <p className="compliance-desc">
-                  Valid Importer-Exporter Code Registry for frictionless customs clearance at Indian seaports.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>IEC 10-DIGIT ACTIVE REGISTRY</span>
-                  </div>
-                  <div className="compliance-watermark-icon teal">
-                    <Anchor size={48} />
-                  </div>
-                </div>
-              </div>
 
-              {/* 6. FIEO */}
-              <div className="compliance-card-exact fieo">
-                <div className="compliance-card-top-row">
-                  <div className="compliance-icon-box indigo">
-                    <Globe size={22} />
-                  </div>
-                  <div className="compliance-live-status">
-                    <span className="status-dot emerald"></span>
-                    <span>Global Trade Network</span>
-                  </div>
-                </div>
-                <div className="compliance-meta-bar">
-                  <span className="compliance-badge indigo">FIEO</span>
-                  <span className="compliance-auth-text">APEX EXPORT PROMOTION BODY</span>
-                </div>
-                <h3 className="compliance-title">
-                  Federation of Indian Export Organisations
-                </h3>
-                <p className="compliance-desc">
-                  Recognized Premier Trading Enterprise with direct trade desk facilitation across 45+ nations.
-                </p>
-                <div className="compliance-footer-row">
-                  <div className="compliance-reg-pill">
-                    <CheckCircle2 size={13} className="reg-check" />
-                    <span>PREMIER EXPORT HOUSE STATUS</span>
-                  </div>
-                  <div className="compliance-watermark-icon indigo">
-                    <Globe size={48} />
-                  </div>
-                </div>
               </div>
-
             </div>
 
           </div>
