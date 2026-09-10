@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Globe, Ship, Plane, Truck, Train, FileCheck, 
+  Globe, Ship, Plane, Truck, Train, FileCheck, Award,
   ArrowRight, ShieldCheck, CheckCircle2, Box, Anchor, 
   Thermometer, Clock, HelpCircle, Layers, Check, Sparkles,
   Search, Apple, Wheat, ShoppingBag, Users, Tag, FileText,
   MapPin, Handshake, Warehouse
 } from 'lucide-react';
-import { logisticsServices } from '../data/services.js';
+import { logisticsServices, consultancyPlans } from '../data/services.js';
 
 export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
   const getBadgeIcon = (badge) => {
@@ -55,15 +55,6 @@ export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
     }
     return <CheckCircle2 style={{ width: 16, height: 16 }} />;
   };
-
-  const comparisonData = [
-    { feature: 'Primary Advantage', ocean: 'Lowest unit cost for heavy bulk', air: 'Fastest transit (24-72h)', road: 'Door-to-door flexibility', rail: 'Eco-friendly bulk rail corridor' },
-    { feature: 'Typical Transit Time', ocean: '12 - 35 Days', air: '1 - 3 Days', road: '1 - 3 Days Inland', rail: '18 - 36 Hours to Port' },
-    { feature: 'Volume Capacity', ocean: 'High (20ft, 40ft FCL & Bulk)', air: 'Up to 110 MT / Freighter', road: 'Up to 32 MT / Trailer', rail: '90 TEUs / Block Rake' },
-    { feature: 'Ideal Commodities', ocean: 'Basmati Rice, Pulses, Grains', air: 'Fresh Fruits, Saffron, Samples', road: 'Farm-to-Port container drayage', rail: 'Heavy agro commodities' },
-    { feature: 'Temperature Control', ocean: 'Reefer Containers (-30°C to +30°C)', air: 'Active Cool-Chain Containers', road: 'Refrigerated GPS Trucks', rail: 'Ventilated & Insulated Boxes' },
-    { feature: 'Carbon Footprint', ocean: 'Very Low per Ton-Km', air: 'High', road: 'Moderate', rail: 'Lowest Inland Footprint' }
-  ];
 
   return (
     <main className="page-services-redesigned">
@@ -209,7 +200,113 @@ export default function ServicesPage({ onOpenQuote, onOpenServiceModal }) {
         </div>
       </section>
 
-      {/* 3. BOTTOM "GET IN TOUCH / LET'S PLAN YOUR NEXT SHIPMENT" BANNER */}
+      {/* 3. EXPORT CONSULTANCY & COMPLIANCE PACKAGES */}
+      <section className="consultancy-plans-section" id="consultancy-plans">
+        <div className="container-wide">
+          
+          <div className="consultancy-section-header">
+            <div className="consultancy-eyebrow-pill">
+              <FileCheck size={14} />
+              <span>EXPORT CONSULTANCY & COMPLIANCE PACKAGES</span>
+            </div>
+            
+            <h2 className="consultancy-main-heading">
+              <span>Transparent Advisory &</span>
+              <span className="consultancy-heading-accent"> EXIM Compliance Plans</span>
+            </h2>
+            
+            <p className="consultancy-sub-heading">
+              Step-by-step statutory registrations, DGFT & ICEGATE integrations, banking authorizations, and export-import compliance packages engineered to launch and scale Indian exporters globally.
+            </p>
+          </div>
+
+          <div className="consultancy-exact-grid">
+            {consultancyPlans.map((plan) => (
+              <div 
+                key={plan.id} 
+                className={`consultancy-exact-card ${plan.popular ? 'is-popular-card' : ''}`}
+              >
+                {/* Most Popular Floating Tag for Standard Plan */}
+                {plan.popular && (
+                  <div className="card-popular-pill">
+                    <span>MOST POPULAR</span>
+                  </div>
+                )}
+
+                {/* Card Header */}
+                <div className="card-head-area">
+                  {!plan.popular && (
+                    <div className="card-top-tag-row">
+                      <span className="card-top-tag-text">{plan.tag}</span>
+                      <span className="card-top-tag-dash">—</span>
+                    </div>
+                  )}
+
+                  <h3 className="card-plan-title">{plan.name}</h3>
+
+                  <div className="card-price-row">
+                    <span className="card-price-num">{plan.price}</span>
+                    <span className="card-price-gst">{plan.gst}</span>
+                  </div>
+
+                  <p className="card-plan-description">{plan.description}</p>
+
+                  <button 
+                    className={`btn-plan-action ${plan.buttonStyle === 'filled' ? 'btn-plan-filled' : 'btn-plan-outline'}`}
+                    onClick={() => onOpenQuote(`Consultancy: ${plan.name} (${plan.price} ${plan.gst})`)}
+                  >
+                    <span>{plan.buttonText}</span>
+                  </button>
+                </div>
+
+                <div className="card-separator-line"></div>
+
+                {/* Features List */}
+                <div className="card-features-area">
+                  <h4 className="card-list-heading">{plan.listTitle}</h4>
+                  <ul className="card-items-list">
+                    {plan.features.map((feat, idx) => (
+                      <li 
+                        key={idx} 
+                        className={`card-feature-item ${feat.included ? 'feat-included' : 'feat-excluded'}`}
+                      >
+                        <span className="card-check-bubble">
+                          {feat.included ? (
+                            <CheckCircle2 size={17} className="check-icon-green" />
+                          ) : (
+                            <Check size={15} className="check-icon-muted" />
+                          )}
+                        </span>
+                        <span className="card-feature-label">{feat.name}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Bottom Link */}
+                <div className="card-foot-area">
+                  <button 
+                    className="card-scope-link"
+                    onClick={() => onOpenQuote(`Consultancy: ${plan.name} (${plan.price} ${plan.gst})`)}
+                  >
+                    <span>View complete scope</span>
+                    <ArrowRight size={14} />
+                  </button>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+          {/* Footer Note */}
+          <div className="consultancy-footer-note">
+            <p>GST is additional. Final scope is confirmed after your requirement review.</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 4. BOTTOM "GET IN TOUCH / LET'S PLAN YOUR NEXT SHIPMENT" BANNER */}
       <section className="services-bottom-cta-banner">
         <div className="cta-banner-bg">
           <img src="/assets/bg.png" alt="Container Port Fleet" />

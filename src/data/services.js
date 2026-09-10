@@ -326,3 +326,114 @@ export const containerSpecs = [
     }
   }
 ];
+
+export const consultancyPlans = [
+  {
+    id: 'basic-plan',
+    name: 'Basic Plan',
+    tag: 'STARTER ESSENTIALS',
+    price: '₹34,999',
+    gst: '+ GST',
+    description: 'Essential registrations and legal licences for new exporters.',
+    popular: false,
+    listTitle: 'Included Deliverables & Scope',
+    buttonText: 'Choose Basic Plan',
+    buttonStyle: 'outline',
+    features: [
+      { name: 'Gumasta License / Shop Act Registration', included: true },
+      { name: 'MSME Registration', included: true },
+      { name: 'IEC (Import Export Code)', included: true },
+      { name: 'Bank Account Assistance', included: true },
+      { name: 'GST Registration & LUT Filing', included: true },
+      { name: 'AD Code Generation', included: true },
+      { name: 'RCMC Certificate', included: true },
+      { name: 'Phytosanitary / Fumigation Certification', included: true },
+      { name: 'DSC (Digital Signature Certificate - Class 3)', included: true },
+      { name: 'DGFT (Registration & Integration)', included: false },
+      { name: 'ICEGATE (Registration & Integration)', included: false },
+      { name: 'AD Code (Registration & Approval)', included: false },
+      { name: 'IFSC / PFMS (Registration & Approval)', included: false },
+      { name: 'Company Formation', included: false },
+      { name: 'Trademark Application', included: false },
+      { name: 'Digital Platform Assistance', included: false },
+      { name: 'Quality Assessment Certification Support', included: false },
+      { name: 'Pre & Post Shipment Documentation', included: false },
+      { name: 'Shipment Cost Analysis & Statement', included: false },
+      { name: 'Expert Reviews & Compliance Guidance', included: false },
+      { name: 'Exhibition Exposure & Networking', included: false }
+    ]
+  },
+  {
+    id: 'standard-plan',
+    name: 'Standard Plan',
+    tag: 'MOST POPULAR',
+    price: '₹44,999',
+    gst: '+ GST',
+    description: 'Full portal integrations and banking approvals for active exporters.',
+    popular: true,
+    listTitle: 'Included Deliverables & Scope',
+    buttonText: 'Choose Standard Plan',
+    buttonStyle: 'filled',
+    features: [
+      { name: 'Gumasta License / Shop Act Registration', included: true },
+      { name: 'MSME Registration', included: true },
+      { name: 'IEC (Import Export Code)', included: true },
+      { name: 'Bank Account Assistance', included: true },
+      { name: 'GST Registration & LUT Filing', included: true },
+      { name: 'AD Code Generation', included: true },
+      { name: 'RCMC Certificate', included: true },
+      { name: 'Phytosanitary / Fumigation Certification', included: true },
+      { name: 'DSC (Digital Signature Certificate - Class 3)', included: true },
+      { name: 'DGFT (Registration & Integration)', included: true },
+      { name: 'ICEGATE (Registration & Integration)', included: true },
+      { name: 'AD Code (Registration & Approval)', included: true },
+      { name: 'IFSC / PFMS (Registration & Approval)', included: true },
+      { name: 'Company Formation', included: false },
+      { name: 'Trademark Application', included: false },
+      { name: 'Digital Platform Assistance', included: false },
+      { name: 'Quality Assessment Certification Support', included: false },
+      { name: 'Pre & Post Shipment Documentation', included: false },
+      { name: 'Shipment Cost Analysis & Statement', included: false },
+      { name: 'Expert Reviews & Compliance Guidance', included: false },
+      { name: 'Exhibition Exposure & Networking', included: false }
+    ]
+  },
+  {
+    id: 'premium-plan',
+    name: 'Premium Plan',
+    tag: 'ALL-INCLUSIVE SUPPORT',
+    price: '₹89,999',
+    gst: '+ GST',
+    description: 'End-to-end trade advisory for incorporation, documentation, digital platforms and shipment preparation.',
+    popular: false,
+    listTitle: 'Included Deliverables & Scope',
+    buttonText: 'Choose Premium Plan',
+    buttonStyle: 'outline',
+    features: [
+      { name: 'Gumasta License / Shop Act Registration', included: true },
+      { name: 'MSME Registration', included: true },
+      { name: 'IEC (Import Export Code)', included: true },
+      { name: 'Bank Account Assistance', included: true },
+      { name: 'GST Registration & LUT Filing', included: true },
+      { name: 'AD Code Generation', included: true },
+      { name: 'RCMC Certificate', included: true },
+      { name: 'Phytosanitary / Fumigation Certification', included: true },
+      { name: 'DSC (Digital Signature Certificate - Class 3)', included: true },
+      { name: 'DGFT (Registration & Integration)', included: true },
+      { name: 'ICEGATE (Registration & Integration)', included: true },
+      { name: 'AD Code (Registration & Approval)', included: true },
+      { name: 'IFSC / PFMS (Registration & Approval)', included: true },
+      { name: 'Company Formation', included: true },
+      { name: 'Trademark Application', included: true },
+      { name: 'Digital Platform Assistance', included: true },
+      { name: 'Quality Assessment Certification Support', included: true },
+      { name: 'Pre & Post Shipment Documentation', included: true },
+      { name: 'Shipment Cost Analysis & Statement', included: true },
+      { name: 'Expert Reviews & Compliance Guidance', included: true },
+      { name: 'Exhibition Exposure & Networking', included: true }
+    ]
+  }
+];
+
+
+
