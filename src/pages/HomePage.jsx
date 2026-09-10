@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { transportModes, logisticsServices, whyChooseUsPillars } from '../data/services.js';
 import { ApedaGraphic, MultimodalGraphic, InlandHubGraphic, GlobalDeskGraphic } from '../components/HeroHighlightGraphics.jsx';
+import TrustedExporterBanner from '../components/TrustedExporterBanner.jsx';
 
 export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
   const dynamicWords = [
@@ -478,6 +479,9 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
           </div>
         </div>
       </section>
+
+      {/* 5. TRUSTED GLOBAL EXPORTER SPOTLIGHT */}
+      <TrustedExporterBanner onOpenQuote={onOpenQuote} />
 
       {/* 6. THE PANKAJ APPROACH (EXACT REFERENCE WITH LBG.PNG) */}
       <section className="pankaj-approach-section" id="approach">
