@@ -10504,7 +10504,13 @@ textarea {
 .bvm-intro-col {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
+}
+
+.bvm-intro-top-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .bvm-adv-eyebrow {
@@ -10568,7 +10574,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .bvm-adv-calligraphy {
@@ -10591,15 +10597,14 @@ textarea {
   border-radius: 1px;
 }
 
-/* Farm Photo Card */
-.bvm-farm-photo-card {
+/* Farm Bottom Visual (Half-height lower landscape) */
+.bvm-farm-bottom-visual {
   position: relative;
-  border-radius: 22px;
+  border-radius: 24px;
   overflow: hidden;
-  flex: 1;
-  min-height: 340px;
-  box-shadow: 0 12px 32px rgba(7, 38, 21, 0.08);
-  border: 1px solid rgba(22, 163, 74, 0.15);
+  height: 400px;
+  box-shadow: 0 14px 34px rgba(7, 38, 21, 0.09);
+  border: 1px solid rgba(22, 163, 74, 0.14);
 }
 
 .bvm-farm-photo {
@@ -10610,24 +10615,29 @@ textarea {
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bvm-farm-photo-card:hover .bvm-farm-photo {
-  transform: scale(1.05);
+.bvm-farm-bottom-visual:hover .bvm-farm-photo {
+  transform: scale(1.04);
 }
 
-.bvm-farm-overlay {
+.bvm-farm-top-fade {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(7, 38, 21, 0) 40%, rgba(7, 38, 21, 0.75) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(180deg, rgba(244, 248, 245, 0.95) 0%, rgba(244, 248, 245, 0) 100%);
   pointer-events: none;
+  z-index: 2;
 }
 
 .bvm-farm-caption {
   position: absolute;
-  bottom: 1.35rem;
-  left: 1.35rem;
-  right: 1.35rem;
+  bottom: 1.45rem;
+  left: 1.45rem;
+  right: 1.45rem;
   color: #FFFFFF;
-  z-index: 2;
+  z-index: 3;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .bvm-caption-line-1 {
@@ -10636,7 +10646,7 @@ textarea {
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
   display: block;
   margin-bottom: 0.25rem;
 }
@@ -10657,7 +10667,7 @@ textarea {
 .bvm-caption-rule {
   flex: 1;
   height: 1.5px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   display: inline-block;
 }
 

@@ -17,51 +17,54 @@ export default function WhyChooseUsSection() {
       <div className="container-wide bvm-advantage-layout">
         
         {/* =========================================================================
-            LEFT COLUMN: Intro + Brand Mission + Farm Photo Card
+            LEFT COLUMN: Intro + Brand Mission + Farm Photo Lower Half
             ========================================================================= */}
         <div className="bvm-intro-col">
-          {/* Eyebrow */}
-          <div className="bvm-adv-eyebrow">
-            <span>OUR ADVANTAGE</span>
-          </div>
-
-          {/* Main Title */}
-          <h2 className="bvm-adv-heading">
-            Why choose<br />
-            <span className="bvm-brand-highlight">BVM Global</span>
-          </h2>
-
-          {/* Subtitle */}
-          <p className="bvm-adv-subtitle">
-            A dependable route from Indian farms to global buyers.
-          </p>
-
-          {/* Accent Line Tagline */}
-          <div className="bvm-adv-tagline">
-            <span className="bvm-tagline-bar" aria-hidden="true"></span>
-            <span className="bvm-tagline-text">Source. Prepare. Deliver.</span>
-          </div>
-
-          {/* Calligraphic Serif Statement with underline */}
-          <div className="bvm-adv-calligraphy-wrap">
-            <div className="bvm-adv-calligraphy">
-              <span>Good</span>
-              <span>Produce</span>
-              <span>Brighter</span>
-              <span>Tomorrows</span>
+          {/* Top Text Content */}
+          <div className="bvm-intro-top-content">
+            {/* Eyebrow */}
+            <div className="bvm-adv-eyebrow">
+              <span>OUR ADVANTAGE</span>
             </div>
-            <div className="bvm-calligraphy-underline" aria-hidden="true"></div>
+
+            {/* Main Title */}
+            <h2 className="bvm-adv-heading">
+              Why choose<br />
+              <span className="bvm-brand-highlight">BVM Global</span>
+            </h2>
+
+            {/* Subtitle */}
+            <p className="bvm-adv-subtitle">
+              A dependable route from Indian farms to global buyers.
+            </p>
+
+            {/* Accent Line Tagline */}
+            <div className="bvm-adv-tagline">
+              <span className="bvm-tagline-bar" aria-hidden="true"></span>
+              <span className="bvm-tagline-text">Source. Prepare. Deliver.</span>
+            </div>
+
+            {/* Calligraphic Serif Statement with underline */}
+            <div className="bvm-adv-calligraphy-wrap">
+              <div className="bvm-adv-calligraphy">
+                <span>Good</span>
+                <span>Produce</span>
+                <span>Brighter</span>
+                <span>Tomorrows</span>
+              </div>
+              <div className="bvm-calligraphy-underline" aria-hidden="true"></div>
+            </div>
           </div>
 
-          {/* Bottom Farm Photo Card */}
-          <div className="bvm-farm-photo-card">
+          {/* Bottom Half Farm Photo Visual */}
+          <div className="bvm-farm-bottom-visual">
             <img 
               src="/assets/farm-field-background.png" 
               alt="Indian agriculture tea and farm fields" 
               className="bvm-farm-photo"
               loading="lazy"
             />
-            <div className="bvm-farm-overlay"></div>
+            <div className="bvm-farm-top-fade" aria-hidden="true"></div>
             <div className="bvm-farm-caption">
               <span className="bvm-caption-line-1">FROM INDIA</span>
               <div className="bvm-caption-line-2">
