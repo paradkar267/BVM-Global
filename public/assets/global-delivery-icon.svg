@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 96" role="img" aria-label="Global delivery">
+  <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 68h91l-7 10H18Z"/>
+    <path d="M17 68V48h30v20M47 68V35h27v33M74 68V25h18v43"/>
+    <path d="M28 48V36h13v12M56 35V21h13v14M79 25V13h9v12"/>
+    <path d="M4 82c7 0 7 5 14 5s7-5 14-5 7 5 14 5 7-5 14-5 7 5 14 5 7-5 14-5"/>
+  </g>
+</svg>

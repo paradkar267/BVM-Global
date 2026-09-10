@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Farmer direct">
+  <g fill="none" stroke="#103B2B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 68c12-11 28-12 43-2l12 7c4 3 5 8 2 11-3 3-8 3-12 1L42 77"/>
+    <path d="M14 68l15-15c7-7 17-7 24-1l7 6c3 3 3 7 0 10-3 3-7 3-10 1l-8-6"/>
+    <path d="M61 43c-2-13 5-23 18-27 2 13-4 24-18 27Z"/>
+    <path d="M60 42c-6-7-14-8-22-5 4 8 12 11 22 5Z"/>
+    <path d="M59 44c5-7 12-12 21-15"/>
+  </g>
+</svg>

@@ -251,88 +251,104 @@ export default function AboutPage({ onOpenQuote }) {
         </div>
       </section>
  
-      {/* 2. COMPANY NARRATIVE & NAGPUR ZERO-MILE HUB (DIRECTLY BELOW BANNER) */}
-      <section className="heritage-gateway-section" id="story">
-        <div className="heritage-gateway-ambient-glow"></div>
-        <div className="heritage-gateway-ambient-left"></div>
-        <div className="container-wide">
-          <div className="heritage-gateway-grid">
+      {/* 2. OUR STORY & HERITAGE (EXACT REFERENCE DESIGN) */}
+      <section className="our-story-section" id="story">
+        <div className="container-wide our-story-container">
+          
+          {/* Section Header */}
+          <div className="story-header-block">
+            <div className="story-eyebrow">
+              <span className="story-eyebrow-dash">—</span>
+              <span>OUR STORY & HERITAGE • EST. 2004</span>
+            </div>
+
+            <h2 className="story-main-title">
+              <span>Connecting Sourcing Excellence</span>
+              <span className="story-title-italic">With Global Trade Desks</span>
+            </h2>
+          </div>
+
+          {/* 2-Column Split Grid */}
+          <div className="story-split-grid">
             
-            {/* Left Narrative Column */}
-            <div className="heritage-story-col">
-              <div className="heritage-badge">
-                <span className="heritage-badge-dot"></span>
-                <Target className="heritage-badge-icon" />
-                <span>OUR STORY & HERITAGE • EST. 2004</span>
+            {/* Left: Farm Inspection Photo Card */}
+            <div className="story-photo-wrapper">
+              <div className="story-photo-card">
+                <img 
+                  src="/assets/g3.jpeg" 
+                  alt="Field Inspection & Zero-Middlemen Sourcing" 
+                  className="story-main-photo" 
+                />
+                <div className="story-photo-caption">
+                  <h4 className="story-caption-title">Field Inspection & Zero-Middlemen Sourcing</h4>
+                  <p className="story-caption-sub">Direct Grower Partnerships • Strict Quality Rigor • Global Dispatch</p>
+                </div>
               </div>
+            </div>
 
-              <h2 className="heritage-title">
-                Connecting Sourcing Excellence With{' '}
-                <span className="heritage-title-highlight">Global Trade Desks</span>
-              </h2>
-
-              <p className="heritage-lead">
+            {/* Right: Narrative, Features & Actions */}
+            <div className="story-content-col">
+              <p className="story-lead-text">
                 Established with a vision to showcase the richness of Indian agriculture to the world, <strong>Pankaj Overseas</strong> has evolved into a premier international export house and multimodal freight logistics facilitator.
               </p>
 
-              <p className="heritage-body">
+              <p className="story-body-text">
                 From the aromatic spice gardens of Kerala and the fertile Basmati belts of Northern India to the sun-drenched orchards of Maharashtra, we work hand-in-hand with verified growers, modern cleaning mills, and global liner operators to deliver unmatched quality.
               </p>
 
-              {/* Feature Cards Grid */}
-              <div className="heritage-features-grid">
-                <div className="heritage-feature-card">
-                  <div className="heritage-feat-icon-box">
-                    <CheckCircle2 className="heritage-feat-icon" />
-                  </div>
-                  <div className="heritage-feat-text">
-                    <h4 className="heritage-feat-title">Direct Farm Sourcing</h4>
-                    <p className="heritage-feat-desc">100% pure origin traceability with verified growers & zero middlemen.</p>
-                  </div>
-                </div>
+              <div className="story-divider-line"></div>
 
-                <div className="heritage-feature-card">
-                  <div className="heritage-feat-icon-box">
-                    <ShieldCheck className="heritage-feat-icon" />
-                  </div>
-                  <div className="heritage-feat-text">
-                    <h4 className="heritage-feat-title">Zero-Damage Packing</h4>
-                    <p className="heritage-feat-desc">Multi-layer vacuum, food-grade PP, jute & export-grade CFB boxes.</p>
-                  </div>
+              {/* Feature 1: Direct Farm Sourcing */}
+              <div className="story-feature-row">
+                <div className="story-feat-icon-col">
+                  <svg className="story-feat-svg" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                    <path d="M16 16c-1.5-1-4-1-6 0-2 1-4 1-6 0" />
+                    <path d="M22 20c-3-2-8-2-12 0-4 2-7 1-10 0" />
+                  </svg>
+                </div>
+                <div className="story-feat-vert-divider"></div>
+                <div className="story-feat-text-col">
+                  <h3 className="story-feat-heading">Direct Farm Sourcing</h3>
+                  <p className="story-feat-description">100% pure origin traceability with verified growers & zero middlemen.</p>
+                </div>
+              </div>
+
+              <div className="story-divider-line"></div>
+
+              {/* Feature 2: Zero-Damage Packing */}
+              <div className="story-feature-row">
+                <div className="story-feat-icon-col">
+                  <svg className="story-feat-svg" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                    <path d="M16 11c0 2-2 3-4 3" />
+                  </svg>
+                </div>
+                <div className="story-feat-vert-divider"></div>
+                <div className="story-feat-text-col">
+                  <h3 className="story-feat-heading">Zero-Damage Packing</h3>
+                  <p className="story-feat-description">Multi-layer vacuum, food-grade PP, jute & export-grade CFB boxes.</p>
                 </div>
               </div>
 
               {/* Action Buttons */}
-              <div className="heritage-actions">
-                <button className="heritage-btn-primary" onClick={() => onOpenQuote()}>
+              <div className="story-actions-row">
+                <button className="story-btn-primary" onClick={() => onOpenQuote()}>
                   <span>Partner With Us</span>
-                  <ArrowRight className="heritage-btn-arrow" />
+                  <ArrowRight size={16} />
                 </button>
-                <a href="#journey" className="heritage-btn-secondary">
+                <a href="#journey" className="story-btn-secondary">
                   <span>Explore Our Journey</span>
-                  <TrendingUp className="heritage-btn-icon" />
+                  <ArrowRight size={16} />
                 </a>
               </div>
-            </div>
 
-            {/* Right: Authentic Farm & Sourcing Operations Image Card */}
-            <div className="heritage-visual-col">
-              <div className="heritage-photo-frame">
-                <img 
-                  src="/assets/g3.jpeg" 
-                  alt="Pankaj Overseas Direct Farm Sourcing & Quality Inspection" 
-                  className="heritage-photo-img"
-                />
-                <div className="heritage-photo-overlay"></div>
-
-                <div className="heritage-photo-caption">
-                  <span className="heritage-caption-title">Field Inspection & Zero-Middlemen Sourcing</span>
-                  <span className="heritage-caption-sub">Direct Grower Partnerships • Strict Quality Rigor • Global Dispatch</span>
-                </div>
-              </div>
             </div>
 
           </div>
+
         </div>
       </section>
 
