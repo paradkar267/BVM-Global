@@ -11,6 +11,7 @@ import { transportModes, logisticsServices, whyChooseUsPillars } from '../data/s
 import { ApedaGraphic, MultimodalGraphic, InlandHubGraphic, GlobalDeskGraphic } from '../components/HeroHighlightGraphics.jsx';
 import TrustedExporterBanner from '../components/TrustedExporterBanner.jsx';
 import TrustComplianceSection from '../components/TrustComplianceSection.jsx';
+import WhyChooseUsSection from '../components/WhyChooseUsSection.jsx';
 
 export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
   const dynamicWords = [
@@ -624,7 +625,10 @@ export default function HomePage({ onOpenQuote, onOpenServiceModal }) {
         </div>
       </section>
 
-      {/* 7. QUICK INQUIRY / GET A QUOTE CTA SECTION (EXECUTIVE BANNER) */}
+      {/* 8. OUR ADVANTAGE / WHY CHOOSE BVM GLOBAL */}
+      <WhyChooseUsSection />
+
+      {/* 9. QUICK INQUIRY / GET A QUOTE CTA SECTION (EXECUTIVE BANNER) */}
       <section className="home-cta-banner-section" id="quote">
         <div className="home-cta-banner-bg">
           <img src="/assets/bg.png" alt="Global Multimodal Freight Fleet" />

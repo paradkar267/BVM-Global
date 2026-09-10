@@ -10991,3 +10991,175 @@ textarea {
     font-size: 0.86rem;
   }
 }
+
+/* ==========================================================================
+   OUR ADVANTAGE / WHY CHOOSE BVM GLOBAL (REFERENCE EXACT DESIGN)
+   ========================================================================== */
+.bvm-advantage-section {
+  padding: clamp(4.5rem, 6.5vw, 6.5rem) 0;
+  background: #FAFDFB;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #E6ECE8;
+  border-bottom: 1px solid #E6ECE8;
+}
+
+.bvm-advantage-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.bvm-advantage-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto clamp(2.5rem, 4vw, 3.75rem) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bvm-advantage-eyebrow {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #15803D;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.65rem;
+}
+
+.bvm-advantage-title {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: clamp(2.2rem, 5vw, 3.35rem);
+  font-weight: 900;
+  color: #072615;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.bvm-advantage-accent-bar {
+  width: 50px;
+  height: 3.5px;
+  border-radius: 999px;
+  background: #16A34A;
+  margin-top: 1.15rem;
+}
+
+/* Advantage Cards Grid */
+.bvm-advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.bvm-advantage-card {
+  background: #FFFFFF;
+  border: 1px solid #E4EDE7;
+  border-radius: 26px;
+  padding: 2.2rem 1.35rem 1.95rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bvm-advantage-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(34, 197, 94, 0.45);
+  box-shadow: 0 16px 36px -8px rgba(22, 163, 74, 0.12);
+}
+
+.bvm-card-icon-squircle {
+  width: 66px;
+  height: 66px;
+  border-radius: 20px;
+  background: #E2F5E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.15rem;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.bvm-advantage-card:hover .bvm-card-icon-squircle {
+  transform: scale(1.08);
+}
+
+.bvm-card-emoji {
+  font-size: 2.15rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bvm-card-title {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #072615;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin: 0 0 0.55rem 0;
+}
+
+.bvm-card-desc {
+  font-size: 0.86rem;
+  color: #64748B;
+  line-height: 1.48;
+  margin: 0;
+  max-width: 240px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1180px) {
+  .bvm-advantage-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bvm-advantage-section {
+    padding: clamp(3.5rem, 6vw, 4.5rem) 0;
+  }
+
+  /* Exactly 2 columns side-by-side on mobile as shown in reference */
+  .bvm-advantage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+  }
+
+  .bvm-advantage-card {
+    padding: 1.6rem 0.95rem 1.4rem 0.95rem;
+    border-radius: 22px;
+  }
+
+  .bvm-card-icon-squircle {
+    width: 56px;
+    height: 56px;
+    border-radius: 17px;
+    margin-bottom: 0.85rem;
+  }
+
+  .bvm-card-emoji {
+    font-size: 1.75rem;
+  }
+
+  .bvm-card-title {
+    font-size: 1.02rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .bvm-card-desc {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+}
