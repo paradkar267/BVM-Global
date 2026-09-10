@@ -176,7 +176,7 @@ export const transportModes = [
     bestFor: 'Basmati Rice, Pulses, Grains, Bulk Spices, Raw Cotton',
     ports: 'JNPT (Mumbai), Mundra, Chennai, Cochin, Pipavav',
     icon: 'ship',
-    image: '/assets/m1.png'
+    image: '/assets/m2.png'
   },
   {
     id: 'air',
@@ -190,7 +190,7 @@ export const transportModes = [
     bestFor: 'Alphonso Mangoes, Pomegranates, Saffron, Cardamom, Samples',
     ports: 'Mumbai (BOM), Delhi (DEL), Hyderabad (HYD), Bengaluru (BLR)',
     icon: 'plane',
-    image: '/assets/m2.png'
+    image: '/assets/m1.png'
   },
   {
     id: 'road',
@@ -204,7 +204,7 @@ export const transportModes = [
     bestFor: 'Farm-to-Packhouse & Factory-to-Port Container Transit',
     ports: 'Nagpur Hub, Vidarbha Corridors, National Highways',
     icon: 'truck',
-    image: '/assets/m3.png'
+    image: '/assets/m4.png'
   },
   {
     id: 'rail',
@@ -218,7 +218,7 @@ export const transportModes = [
     bestFor: 'Heavy Commodities, Grain Sacks, Eco-friendly bulk haulage',
     ports: 'Nagpur ICD, JNPT Port Rail Terminal, Mundra DFC',
     icon: 'train',
-    image: '/assets/m4.png'
+    image: '/assets/m3.png'
   }
 ];
 
