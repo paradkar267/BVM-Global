@@ -10447,135 +10447,610 @@ textarea {
 }
 
 /* ==========================================================================
-   OUR ADVANTAGE / WHY CHOOSE BVM GLOBAL (REFERENCE EXACT DESIGN)
+   OUR ADVANTAGE / WHY CHOOSE BVM GLOBAL (EXACT REFERENCE MOCKUP SPEC)
    ========================================================================== */
 .bvm-advantage-section {
   padding: clamp(4.5rem, 6.5vw, 6.5rem) 0;
-  background: #FAFDFB;
+  background: #F4F8F5;
   position: relative;
   overflow: hidden;
   border-top: 1px solid #E6ECE8;
   border-bottom: 1px solid #E6ECE8;
 }
 
-.bvm-advantage-container {
+.bvm-advantage-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+  align-items: start;
+  max-width: 1260px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
-  max-width: 1240px;
-  margin: 0 auto;
 }
 
-.bvm-advantage-header {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto clamp(2.5rem, 4vw, 3.75rem) auto;
+/* --------------------------------------------------------------------------
+   LEFT COLUMN (Brand & Farm Photo Card)
+   -------------------------------------------------------------------------- */
+.bvm-intro-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.bvm-advantage-eyebrow {
+.bvm-adv-eyebrow {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #15803D;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.bvm-adv-heading {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  color: #072615;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1.15rem 0;
+}
+
+.bvm-brand-highlight {
+  color: #0D7A47;
+  display: block;
+}
+
+.bvm-adv-subtitle {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 1.5rem 0;
+  max-width: 320px;
+}
+
+.bvm-adv-tagline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.85rem;
+}
+
+.bvm-tagline-bar {
+  width: 3px;
+  height: 28px;
+  background: #16A34A;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.bvm-tagline-text {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #15803D;
+  letter-spacing: 0.02em;
+}
+
+.bvm-adv-calligraphy {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: #8C9F93;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* Farm Photo Card */
+.bvm-farm-photo-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px;
+  box-shadow: 0 12px 32px rgba(7, 38, 21, 0.08);
+  border: 1px solid rgba(22, 163, 74, 0.15);
+}
+
+.bvm-farm-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bvm-farm-photo-card:hover .bvm-farm-photo {
+  transform: scale(1.05);
+}
+
+.bvm-farm-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 38, 21, 0.05) 30%, rgba(7, 38, 21, 0.75) 100%);
+  pointer-events: none;
+}
+
+.bvm-farm-caption {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem;
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.bvm-caption-line-1 {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.bvm-caption-line-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.bvm-caption-dash {
+  width: 28px;
+  height: 1.5px;
+  background: #FFFFFF;
+  opacity: 0.8;
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT COLUMN (Bento Grid)
+   -------------------------------------------------------------------------- */
+.bvm-bento-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+/* Shared Card Basics */
+.bvm-bento-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.bvm-bento-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Number Label */
+.bvm-card-num {
   font-family: var(--font-mono, monospace);
   font-size: 0.82rem;
   font-weight: 800;
-  color: #15803D;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 0.65rem;
+  color: #072615;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.bvm-advantage-title {
+.bvm-num-dash {
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background: #072615;
+}
+
+.bvm-card-num-green {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #0D7A47;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.bvm-card-num-green .bvm-num-dash {
+  background: #0D7A47;
+}
+
+/* CARD 01: Premium Quality (Mint Top Banner) */
+.bvm-card-01 {
+  background: #EDF7EE;
+  border: 1px solid rgba(22, 163, 74, 0.2);
+  border-radius: 22px;
+  padding: 1.85rem 2.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(13, 122, 71, 0.04);
+}
+
+.bvm-card-01:hover {
+  box-shadow: 0 12px 32px rgba(13, 122, 71, 0.08);
+}
+
+.bvm-card-01-content {
+  flex: 1;
+  max-width: 380px;
+  z-index: 2;
+}
+
+.bvm-card-01-title {
   font-family: var(--font-display, 'Outfit', sans-serif);
-  font-size: clamp(2.2rem, 5vw, 3.35rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.35rem);
   font-weight: 900;
   color: #072615;
   letter-spacing: -0.025em;
+  margin: 0.2rem 0 0.5rem 0;
   line-height: 1.15;
+}
+
+.bvm-card-01-desc {
+  font-size: 0.95rem;
+  color: #435B4C;
+  line-height: 1.5;
   margin: 0;
 }
 
-.bvm-advantage-accent-bar {
-  width: 50px;
-  height: 3.5px;
-  border-radius: 999px;
-  background: #16A34A;
-  margin-top: 1.15rem;
-}
-
-/* Advantage Cards Grid */
-.bvm-advantage-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+.bvm-card-01-visual {
+  display: flex;
+  align-items: center;
   gap: 1.25rem;
+  position: relative;
+  flex-shrink: 0;
 }
 
-.bvm-advantage-card {
-  background: #FFFFFF;
-  border: 1px solid #E4EDE7;
-  border-radius: 26px;
-  padding: 2.2rem 1.35rem 1.95rem 1.35rem;
+.bvm-quality-badge-text {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #6C8775;
+  text-align: right;
+  line-height: 1.4;
+}
+
+.bvm-wheat-img {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.02));
+}
+
+/* ROW 2: White Stack Container (Cards 02 + 03) */
+.bvm-card-stack-0203 {
+  background: #FFFFFF;
+  border: 1px solid rgba(22, 163, 74, 0.18);
+  border-radius: 22px;
+  padding: 1.85rem 2.25rem;
+  box-shadow: 0 10px 30px rgba(13, 122, 71, 0.05);
+}
+
+.bvm-card-stack-0203:hover {
+  box-shadow: 0 14px 36px rgba(13, 122, 71, 0.09);
+}
+
+.bvm-stack-row {
+  display: flex;
   align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  gap: 1.75rem;
 }
 
-.bvm-advantage-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(34, 197, 94, 0.45);
-  box-shadow: 0 16px 36px -8px rgba(22, 163, 74, 0.12);
-}
-
-.bvm-card-icon-squircle {
-  width: 66px;
-  height: 66px;
-  border-radius: 20px;
-  background: #E2F5E4;
+.bvm-badge-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #E6F7EC;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.15rem;
-  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6);
-  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-.bvm-advantage-card:hover .bvm-card-icon-squircle {
-  transform: scale(1.08);
+.bvm-svg-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
 }
 
-.bvm-card-emoji {
-  font-size: 2.15rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bvm-stack-text {
+  flex: 1;
 }
 
-.bvm-card-title {
+.bvm-stack-title {
   font-family: var(--font-display, 'Outfit', sans-serif);
-  font-size: 1.15rem;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #072615;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.015em;
+}
+
+.bvm-stack-desc {
+  font-size: 0.92rem;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.48;
+}
+
+.bvm-stack-divider {
+  height: 1px;
+  background: #E4EDE7;
+  margin: 1.4rem 0;
+}
+
+/* ROW 3: Side-by-Side Split (Cards 04 & 05) */
+.bvm-cards-row-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 1.15rem;
+}
+
+/* CARD 04: Global Delivery (Dark Forest Green) */
+.bvm-card-04 {
+  background: #0B4628;
+  border-radius: 22px;
+  padding: 1.65rem 1.85rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 195px;
+  box-shadow: 0 10px 30px rgba(11, 70, 40, 0.2);
+}
+
+.bvm-card-04:hover {
+  box-shadow: 0 14px 36px rgba(11, 70, 40, 0.3);
+}
+
+.bvm-card-num-light {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #86EFAC;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bvm-num-dash-light {
+  display: inline-block;
+  width: 20px;
+  height: 1.5px;
+  background: #86EFAC;
+}
+
+.bvm-card-04-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  margin: 0.85rem 0;
+  z-index: 2;
+  position: relative;
+}
+
+.bvm-ship-icon-box {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #86EFAC;
+}
+
+.bvm-ship-icon {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.bvm-card-04-title {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 0.3rem 0;
+}
+
+.bvm-card-04-desc {
+  font-size: 0.86rem;
+  color: #C2DFCB;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.bvm-card-tag-light {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #86EFAC;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  z-index: 2;
+  position: relative;
+}
+
+.bvm-footer-dash-light {
+  width: 24px;
+  height: 1px;
+  background: #86EFAC;
+  display: inline-block;
+}
+
+.bvm-globe-watermark {
+  position: absolute;
+  right: -25px;
+  bottom: -25px;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+/* CARD 05: Trusted Standards (White Card) */
+.bvm-card-05 {
+  background: #FFFFFF;
+  border: 1px solid rgba(22, 163, 74, 0.18);
+  border-radius: 22px;
+  padding: 1.65rem 1.85rem;
+  color: #072615;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 195px;
+  box-shadow: 0 10px 30px rgba(13, 122, 71, 0.05);
+}
+
+.bvm-card-05:hover {
+  box-shadow: 0 14px 36px rgba(13, 122, 71, 0.09);
+}
+
+.bvm-card-05-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  margin: 0.85rem 0;
+}
+
+.bvm-cert-icon-box {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bvm-cert-icon {
+  width: 100%;
+  height: auto;
+}
+
+.bvm-card-05-title {
+  font-family: var(--font-display, 'Outfit', sans-serif);
+  font-size: 1.25rem;
   font-weight: 800;
   color: #072615;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
-  margin: 0 0 0.55rem 0;
+  margin: 0 0 0.3rem 0;
 }
 
-.bvm-card-desc {
+.bvm-card-05-desc {
   font-size: 0.86rem;
   color: #64748B;
-  line-height: 1.48;
   margin: 0;
-  max-width: 240px;
+  line-height: 1.45;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 1180px) {
-  .bvm-advantage-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+.bvm-card-tag-muted {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #738C7C;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+}
+
+.bvm-footer-dash-muted {
+  width: 24px;
+  height: 1px;
+  background: #738C7C;
+  display: inline-block;
+}
+
+/* BOTTOM FOOTER BAR (Serif tagline, Line, Learn More Link, Leaf Decoration) */
+.bvm-bento-footer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  position: relative;
+}
+
+.bvm-footer-tagline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: #072615;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.bvm-footer-line {
+  flex: 1;
+  height: 1px;
+  background: #D0DDD4;
+  margin: 0 1.5rem;
+}
+
+.bvm-footer-learn-more {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0D7A47;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.bvm-footer-learn-more:hover {
+  color: #15803D;
+  transform: translateX(3px);
+}
+
+.bvm-footer-leaf-art {
+  position: absolute;
+  right: -25px;
+  bottom: -20px;
+  width: 60px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .bvm-advantage-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .bvm-intro-col {
+    max-width: 600px;
+  }
+
+  .bvm-farm-photo-card {
+    height: 220px;
   }
 }
 
@@ -10584,36 +11059,50 @@ textarea {
     padding: clamp(3.5rem, 6vw, 4.5rem) 0;
   }
 
-  /* Exactly 2 columns side-by-side on mobile as shown in reference */
-  .bvm-advantage-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.85rem;
+  .bvm-cards-row-split {
+    grid-template-columns: 1fr;
   }
 
-  .bvm-advantage-card {
-    padding: 1.6rem 0.95rem 1.4rem 0.95rem;
-    border-radius: 22px;
+  .bvm-bento-footer-bar {
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
-  .bvm-card-icon-squircle {
-    width: 56px;
-    height: 56px;
-    border-radius: 17px;
-    margin-bottom: 0.85rem;
+  .bvm-footer-line {
+    display: none;
   }
 
-  .bvm-card-emoji {
-    font-size: 1.75rem;
+  .bvm-card-01 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
   }
 
-  .bvm-card-title {
-    font-size: 1.02rem;
-    margin-bottom: 0.4rem;
+  .bvm-card-01-visual {
+    align-self: flex-end;
   }
 
-  .bvm-card-desc {
-    font-size: 0.78rem;
-    line-height: 1.4;
-    max-width: 100%;
+  .bvm-card-stack-0203 {
+    padding: 1.5rem;
+  }
+
+  .bvm-stack-row {
+    gap: 1.15rem;
+  }
+
+  .bvm-badge-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .bvm-svg-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .bvm-card-04,
+  .bvm-card-05 {
+    padding: 1.5rem;
   }
 }
